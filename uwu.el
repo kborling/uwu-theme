@@ -1,4 +1,4 @@
-; uwu-theme.el --- inspired by uwu Vim theme -*- lexical-binding: t; no-byte-compile: t; -*-
+;;; uwu-theme.el --- inspired by uwu Vim theme -*- lexical-binding: t; no-byte-compile: t; -*-
 ;;
 ;; Copyright (C) 2021 Kevin Borling
 ;;
@@ -7,7 +7,6 @@
 ;; Version: 1.0.0
 ;; Keywords: custom themes, faces
 ;; Homepage: https://github.com/kborling/uwu.el
-;; Package-Requires: ((emacs "25.1") (cl-lib "0.5") (doom-themes "2.2.1"))
 ;;
 ;;; Commentary:
 ;;
@@ -98,6 +97,10 @@
                             (:underline
                              (:style wave)
                              :foreground "#f65b5b"))))
+                        '(link
+                          ((((class color)
+                             (min-colors 89))
+                            (:underline t :foreground "#53A7BF"))))
                         '(highlight
                           ((((class color)
                              (min-colors 89))
@@ -140,7 +143,3 @@
                             (:weight bold :foreground "#53A7BF")))))
 
 (provide-theme 'uwu)
-
-;; Local Variables:
-;; no-byte-compile: t
-;; End:
