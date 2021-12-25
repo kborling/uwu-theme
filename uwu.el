@@ -1,4 +1,4 @@
-;;; uwu-theme.el --- inspired by uwu Vim theme -*- lexical-binding: t; no-byte-compile: t; -*-
+no-byte-compile: t; -*-
 ;;
 ;; Copyright (C) 2021 Kevin Borling
 ;;
@@ -73,6 +73,10 @@
                            ((((class color)
                               (min-colors 89))
                              (:background "#131A1C" :foreground "#C5C8C9"))))
+                        '(cursor
+                           ((((class color)
+                              (min-colors 89))
+                             (:background "#d6d6d6" :foreground "#232a3c"))))
                         '(highline-face
                           ((((class color)
                              (min-colors 89))
@@ -101,6 +105,10 @@
                           ((((class color)
                              (min-colors 89))
                             (:underline t :foreground "#53A7BF"))))
+                        '(minibuffer-prompt
+                          ((((class color)
+                             (min-colors 89))
+                            (:foreground "#e59e67"))))
                         '(highlight
                           ((((class color)
                              (min-colors 89))
