@@ -60,11 +60,11 @@
                         '(font-lock-doc-face
                           ((((class color)
                              (min-colors 89))
-                            (:slant italic :foreground "#6C7275"))))
+                            (:slant italic :foreground "#62686A"))))
                         '(font-lock-comment-face
                           ((((class color)
                              (min-colors 89))
-                            (:slant italic :foreground "#6C7275"))))
+                            (:slant italic :foreground "#62686A"))))
                         '(show-paren-match-face
                           ((((class color)
                              (min-colors 89))
