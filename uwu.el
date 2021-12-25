@@ -1,4 +1,4 @@
-y uwu Vim theme -*- lexical-binding: t; no-byte-compile: t; -*-
+; uwu Vim theme -*- lexical-binding: t; no-byte-compile: t; -*-
 ;;
 ;; Copyright (C) 2021 Kevin Borling
 ;;
