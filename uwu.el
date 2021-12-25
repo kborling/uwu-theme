@@ -1,4 +1,4 @@
-no-byte-compile: t; -*-
+;;; uwu-theme.el --- inspired by uwu Vim theme -*- lexical-binding: t; no-byte-compile: t; -*-
 ;;
 ;; Copyright (C) 2021 Kevin Borling
 ;;
@@ -149,5 +149,13 @@ no-byte-compile: t; -*-
                           ((((class color)
                              (min-colors 89))
                             (:weight bold :foreground "#53A7BF")))))
+;;;###autoload
+(and load-file-name
+    (boundp 'custom-theme-load-path)
+    (add-to-list 'custom-theme-load-path
+                 (file-name-as-directory
+                  (file-name-directory load-file-name))))
 
 (provide-theme 'uwu)
+
+;;; uwu-theme.el ends here
