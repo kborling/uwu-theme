@@ -1,4 +1,4 @@
-;;; uwu-theme.el --- inspired by uwu Vim theme -*- lexical-binding: t; no-byte-compile: t; -*-
+y uwu Vim theme -*- lexical-binding: t; no-byte-compile: t; -*-
 ;;
 ;; Copyright (C) 2021 Kevin Borling
 ;;
@@ -117,18 +117,19 @@
                           ((((class color)
                              (min-colors 89))
                             (:inverse-video t :background "#1b2224"))))
+                        ;;; Light Mode-line
                         '(mode-line-inactive
                           ((((class color)
                              (min-colors 89))
-                            (:inverse-video t :background "#131A1C" :foreground "#C5C8C9"))))
+                            (:background "#1B2224" :foreground "#C5C8C9"))))
                         '(mode-line-buffer-id
                           ((((class color)
                              (min-colors 89))
-                            (:inverse-video t :weight bold :background "#131A1C" :foreground "#C5C8C9"))))
+                            (:weight bold :background "#1B2224" :foreground "#C5C8C9"))))
                         '(mode-line
                           ((((class color)
                              (min-colors 89))
-                            (:inverse-video t :weight bold :background "#131A1C" :foreground "#C5C8C9"))))
+                            (:weight bold :background "#1B2224" :foreground "#C5C8C9"))))
                         '(fringe
                           ((((class color)
                              (min-colors 89))
