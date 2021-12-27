@@ -32,7 +32,7 @@ An awesome dark color scheme for emacs.
    (load-theme 'uwu t)
    ```
    
-### Using Doom Emacs Package.el
+### Using Doom Emacs Packages.el
 1. Add the following code in your `~/.doom.d/packages.el` file:
    ```elisp
    (package! uwu-theme
