@@ -1,6 +1,4 @@
-;;; uwu-theme.el  --- An awesome dark color scheme  -*- lexical-binding: t; -*-
-
-;; Copyright (C) 2021 Kevin Borling
+;;; uwu-theme.el --- An awesome dark color scheme  -*- lexical-binding: t; -*-
 
 ;; Author: Kevin Borling <https://github.com/kborling>
 ;; Created: December 24, 2021
@@ -11,6 +9,8 @@
 ;; Package-Requires: ((emacs "24.1"))
 
 ;;; Commentary:
+
+;; Copyright (C) 2021 Kevin Borling
 ;; Inspired by uwu theme for vim <https://github.com/Mangeshrex/uwu.vim>
 
 ;;; Code:
