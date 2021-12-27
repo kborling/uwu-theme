@@ -1,4 +1,4 @@
-# uwu.el
+# uwu-theme.el
 An awesome dark color scheme for emacs.
 
 ## Screenshot
@@ -8,7 +8,7 @@ An awesome dark color scheme for emacs.
 
 1. Clone repo `git clone https://github.com/kborling/uwu.el.git` in directory of your choosing.
 2. Type `M-x load-file` and choose the `uwu.el` file.
-3. Type `M-x enable-theme` and choose `uwu`.
+3. Type `M-x enable-theme` and choose `uwu-theme`.
 
 ## Installation
 
@@ -17,8 +17,8 @@ An awesome dark color scheme for emacs.
    ```elisp
    (add-to-list 'custom-theme-load-path "~/.emacs.d/themes") ;;; Make a themes directory and add uwu.el to it
 
-   (load-theme 'uwu t t)
-   (enable-theme 'uwu)
+   (load-theme 'uwu-theme t t)
+   (enable-theme 'uwu-theme)
    ```
 
 ## Acknowledgments
