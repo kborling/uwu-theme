@@ -14,9 +14,9 @@
 ;;
 ;;; Code:
 
-(deftheme uwu)
+(deftheme uwu-theme)
 
-(custom-theme-set-faces 'uwu
+(custom-theme-set-faces 'uwu-theme
                         '(font-lock-keyword-face
                           ((((class color)
                              (min-colors 89))
@@ -137,7 +137,7 @@
                         '(linum
                           ((((class color)
                              (min-colors 89))
-                            (:underline :foreground "#2f3638"))))
+                            (:underline t :foreground "#2f3638"))))
                         '(isearch
                           ((((class color)
                              (min-colors 89))
@@ -157,6 +157,6 @@
                  (file-name-as-directory
                   (file-name-directory load-file-name))))
 
-(provide-theme 'uwu)
+(provide-theme 'uwu-theme)
 
 ;;; uwu-theme.el ends here
