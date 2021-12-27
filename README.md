@@ -1,4 +1,4 @@
-# uwu-theme.el
+# UwU Theme
 An awesome dark color scheme for emacs.
 
 ## Screenshot
@@ -12,6 +12,7 @@ An awesome dark color scheme for emacs.
 
 ## Installation
 
+### Manual
 1. Clone repo `git clone https://github.com/kborling/uwu.el.git` in directory of your choosing. 
 2. Add the following code in your emacs config file:
    ```elisp
@@ -20,6 +21,16 @@ An awesome dark color scheme for emacs.
    (load-theme 'uwu t t)
    (enable-theme 'uwu)
    ```
-
+   
+### Using Straight.el
+1. [Install Straight.el](https://github.com/raxod502/straight.el#getting-started)
+2. Add the following code in your emacs config file:
+   ```elisp
+   (straight-use-package
+      '(uwu-theme :host github :repo "kborling/uwu.el"))
+   (require 'uwu-theme)
+   (load-theme 'uwu t)
+   ```
+   
 ## Acknowledgments
 - Inspiration and Color Scheme based on https://github.com/Mangeshrex/uwu.vim
