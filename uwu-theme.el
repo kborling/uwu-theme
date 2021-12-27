@@ -1,22 +1,24 @@
-; uwu Vim theme -*- lexical-binding: t; no-byte-compile: t; -*-
-;;
+;;; uwu-theme.el  --- An awesome dark color scheme  -*- lexical-binding: t; -*-
+
 ;; Copyright (C) 2021 Kevin Borling
-;;
+
 ;; Author: Kevin Borling <https://github.com/kborling>
 ;; Created: December 24, 2021
 ;; Version: 1.0.0
 ;; Keywords: custom themes, faces
+;; URL: https://github.com/kborling/uwu.el
 ;; Homepage: https://github.com/kborling/uwu.el
-;;
+;; Package-Requires: ((emacs "24.1"))
+
 ;;; Commentary:
-;;
 ;; Inspired by uwu theme for vim <https://github.com/Mangeshrex/uwu.vim>
-;;
+
 ;;; Code:
 
-(deftheme uwu-theme)
+(deftheme uwu "UwU color theme")
 
-(custom-theme-set-faces 'uwu-theme
+;;; Theme Faces
+(custom-theme-set-faces 'uwu
                         '(font-lock-keyword-face
                           ((((class color)
                              (min-colors 89))
@@ -117,7 +119,6 @@
                           ((((class color)
                              (min-colors 89))
                             (:inverse-video t :background "#1b2224"))))
-                        ;;; Light Mode-line
                         '(mode-line-inactive
                           ((((class color)
                              (min-colors 89))
@@ -150,6 +151,9 @@
                           ((((class color)
                              (min-colors 89))
                             (:weight bold :foreground "#53A7BF")))))
+
+;;; Footer
+
 ;;;###autoload
 (and load-file-name
     (boundp 'custom-theme-load-path)
@@ -157,6 +161,10 @@
                  (file-name-as-directory
                   (file-name-directory load-file-name))))
 
-(provide-theme 'uwu-theme)
+(provide-theme 'uwu)
 
+;; Local Variables:
+;; no-byte-compile: t
+;; indent-tabs-mode: nil
+;; End:
 ;;; uwu-theme.el ends here
