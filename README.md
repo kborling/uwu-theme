@@ -32,5 +32,17 @@ An awesome dark color scheme for emacs.
    (load-theme 'uwu t)
    ```
    
+### Using Doom Emacs Package.el
+1. Add the following code in your `~/.doom.d/packages.el` file:
+   ```elisp
+   (package! uwu-theme
+      :recipe (:host github :repo "kborling/uwu.el"))
+   ```
+2. Add the following code in your `~/.doom.d/config.el` file:
+   ```elisp
+   (require 'uwu-theme)
+   (load-theme 'uwu t)
+   ```
+   
 ## Acknowledgments
 - Inspiration and Color Scheme based on https://github.com/Mangeshrex/uwu.vim
