@@ -44,5 +44,15 @@ An awesome dark color scheme for emacs.
    (load-theme 'uwu t)
    ```
    
+### Using spacemacs packages
+1. Append the following inside your `~/.config/spacemacs` `dotspacemacs-additional-packages` variable.
+    ```elisp
+    (uwu-theme :location (recipe :fetcher github :repo "kborling/uwu.el"))
+    ```
+2. prepend `'uwu'` to the theme variable:
+   ```elisp
+      dotspacemacs-themes '(uwu)
+   ```
+   
 ## Acknowledgments
 - Inspiration and Color Scheme based on https://github.com/Mangeshrex/uwu.vim
