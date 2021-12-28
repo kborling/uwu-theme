@@ -6,14 +6,14 @@ An awesome dark color scheme for emacs.
 
 ## Try It
 
-1. Clone repo `git clone https://github.com/kborling/uwu.el.git` in directory of your choosing.
+1. Clone repo `git clone https://github.com/kborling/uwu-theme.el.git` in directory of your choosing.
 2. Type `M-x load-file` and choose the `uwu-theme.el` file.
 3. Type `M-x enable-theme` and choose `uwu`.
 
 ## Installation
 
 ### Manual
-1. Clone repo `git clone https://github.com/kborling/uwu.el.git` in directory of your choosing. 
+1. Clone repo `git clone https://github.com/kborling/uwu-theme.el.git` in directory of your choosing. 
 2. Add the following code in your emacs config file:
    ```elisp
    (add-to-list 'custom-theme-load-path "~/.emacs.d/themes") ;;; Make a themes directory and add uwu.el to it
@@ -27,7 +27,7 @@ An awesome dark color scheme for emacs.
 2. Add the following code in your emacs config file:
    ```elisp
    (straight-use-package
-      '(uwu-theme :host github :repo "kborling/uwu.el"))
+      '(uwu-theme :host github :repo "kborling/uwu-theme.el"))
    (require 'uwu-theme)
    (load-theme 'uwu t)
    ```
@@ -36,7 +36,7 @@ An awesome dark color scheme for emacs.
 1. Add the following code in your `~/.doom.d/packages.el` file:
    ```elisp
    (package! uwu-theme
-      :recipe (:host github :repo "kborling/uwu.el"))
+      :recipe (:host github :repo "kborling/uwu-theme.el"))
    ```
 2. Add the following code in your `~/.doom.d/config.el` file:
    ```elisp
@@ -47,7 +47,7 @@ An awesome dark color scheme for emacs.
 ### Using spacemacs packages
 1. Append the following inside your `~/.config/spacemacs` `dotspacemacs-additional-packages` variable.
     ```elisp
-    (uwu-theme :location (recipe :fetcher github :repo "kborling/uwu.el"))
+    (uwu-theme :location (recipe :fetcher github :repo "kborling/uwu-theme.el"))
     ```
 2. prepend `'uwu'` to the theme variable:
    ```elisp
