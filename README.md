@@ -16,14 +16,14 @@ An awesome dark color scheme for emacs.
 1. Clone repo `git clone https://github.com/kborling/uwu-theme.el.git` in directory of your choosing. 
 2. Add the following code in your emacs config file:
    ```elisp
-   (add-to-list 'custom-theme-load-path "~/.emacs.d/themes") ;;; Make a themes directory and add uwu.el to it
+   (add-to-list 'custom-theme-load-path "~/.emacs.d/themes") ;;; Make a themes directory and add uwu-theme.el to it
 
    (load-theme 'uwu t t)
    (enable-theme 'uwu)
    ```
    
-### Using Straight.el
-1. [Install Straight.el](https://github.com/raxod502/straight.el#getting-started)
+### Using straight.el
+1. [Install straight.el](https://github.com/raxod502/straight.el#getting-started)
 2. Add the following code in your emacs config file:
    ```elisp
    (straight-use-package
@@ -32,7 +32,20 @@ An awesome dark color scheme for emacs.
    (load-theme 'uwu t)
    ```
    
-### Using Doom Emacs Packages.el
+### Using use-package with straight.el
+1. [Install straight.el](https://github.com/raxod502/straight.el#getting-started)
+2. Install use-package
+   ```elisp
+   (straight-use-package 'use-package)
+   ```
+4. Add the following code in your emacs config file:
+   ```elisp
+   (use-package uwu-theme
+      :straight (uwu-theme :host github :repo "kborling/uwu-theme.el")
+      :config (load-theme 'uwu t))
+   ```
+   
+### Using Doom Emacs packages.el
 1. Add the following code in your `~/.doom.d/packages.el` file:
    ```elisp
    (package! uwu-theme
@@ -44,7 +57,7 @@ An awesome dark color scheme for emacs.
    (load-theme 'uwu t)
    ```
    
-### Using spacemacs packages
+### Using Spacemacs packages
 1. Append the following inside your `~/.config/spacemacs` `dotspacemacs-additional-packages` variable.
     ```elisp
     (uwu-theme :location (recipe :fetcher github :repo "kborling/uwu-theme.el"))
