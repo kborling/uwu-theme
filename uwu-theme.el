@@ -122,7 +122,7 @@
                         '(mode-line-inactive
                           ((((class color)
                              (min-colors 89))
-                            (:background "#1B2224" :foreground "#C5C8C9"))))
+                            (:background "#1B2224" :foreground "#62686A"))))
                         '(mode-line-buffer-id
                           ((((class color)
                              (min-colors 89))
