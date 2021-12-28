@@ -79,7 +79,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(minibuffer-prompt ((t (:foreground ,uwu-yellow))))
                           `(highlight ((t (:background ,uwu-highlight))))
                           `(region ((t (:inverse-video t :background ,uwu-black))))
-                          `(mode-line-inactive ((t (:background ,uwu-black :foreground ,uwu-bright-white))))
+                          `(mode-line-inactive ((t (:background ,uwu-black :foreground ,uwu-comment))))
                           `(mode-line-buffer-id ((t (:weight bold :background ,uwu-black :foreground ,uwu-bright-white))))
                           `(mode-line ((t (:weight bold :background ,uwu-black :foreground ,uwu-bright-white))))
                           `(fringe ((t (:underline t :foreground ,uwu-highlight))))
@@ -87,6 +87,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(isearch ((t (:inverse-video t :background ,uwu-highlight :foreground ,uwu-blue))))
                           `(isearch-lazy-highlight-face ((t (:inverse-video t :foreground ,uwu-yellow))))
                           `(dired-directory ((t (:weight bold :foreground ,uwu-blue))))))
+
 
 
 ;;;###autoload
