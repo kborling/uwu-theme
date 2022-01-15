@@ -156,19 +156,19 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(org-level-1 ((t (:inherit ,z-variable-pitch :foreground ,uwu-magenta
                                                       ,@(when uwu-scale-org-headlines
                                                           (list :height uwu-height-plus-4))))))
-                          `(org-level-2 ((t (:inherit ,z-variable-pitch :foreground ,uwu-green
+                          `(org-level-2 ((t (:inherit ,z-variable-pitch :foreground ,uwu-blue
                                                       ,@(when uwu-scale-org-headlines
                                                           (list :height uwu-height-plus-3))))))
-                          `(org-level-3 ((t (:inherit ,z-variable-pitch :foreground ,uwu-blue
+                          `(org-level-3 ((t (:inherit ,z-variable-pitch :foreground ,uwu-red
                                                       ,@(when uwu-scale-org-headlines
                                                           (list :height uwu-height-plus-2))))))
                           `(org-level-4 ((t (:inherit ,z-variable-pitch :foreground ,uwu-yellow
                                                       ,@(when uwu-scale-org-headlines
                                                           (list :height uwu-height-plus-1))))))
-                          `(org-level-5 ((t (:inherit ,z-variable-pitch :foreground ,uwu-cyan))))
-                          `(org-level-6 ((t (:inherit ,z-variable-pitch :foreground ,uwu-green))))
-                          `(org-level-7 ((t (:inherit ,z-variable-pitch :foreground ,uwu-red))))
-                          `(org-level-8 ((t (:inherit ,z-variable-pitch :foreground ,uwu-blue))))
+                          `(org-level-5 ((t (:inherit ,z-variable-pitch :foreground ,uwu-green))))
+                          `(org-level-6 ((t (:inherit ,z-variable-pitch :foreground ,uwu-bright-magenta))))
+                          `(org-level-7 ((t (:inherit ,z-variable-pitch :foreground ,uwu-bright-blue))))
+                          `(org-level-8 ((t (:inherit ,z-variable-pitch :foreground ,uwu-bright-red))))
                           `(org-link ((t (:foreground ,uwu-yellow :underline t))))
                           `(org-quote ((t (:background ,uwu-black :extend t))))
                           `(org-example ((t (:background ,uwu-black :extend t))))
