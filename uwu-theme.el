@@ -100,6 +100,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                                                          :extend t))))
                           `(widget-field ((t (:foreground ,uwu-fg :background ,uwu-bright-black))))
                           `(escape-glyph ((t (:foreground ,uwu-yellow :weight bold))))
+                          `(dired-directory ((t (:weight bold :foreground ,uwu-blue))))
                           `(isearch ((t (:inverse-video t :background ,uwu-highlight :foreground ,uwu-blue))))
                           `(isearch-lazy-highlight-face ((t (:inverse-video t :foreground ,uwu-yellow))))
                           `(grep-context-face ((t (:foreground ,uwu-fg))))
@@ -108,15 +109,12 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(grep-match-face ((t (:foreground ,uwu-bright-blue :weight bold))))
                           `(match ((t (:background ,uwu-black :foreground ,uwu-bright-blue :weight bold))))
                           `(completions-annotations ((t (:foreground ,uwu-white))))
-                          `(completions-common-part ((t (:foreground ,uwu-blue))))
+                          `(completions-common-part ((t (:foreground ,uwu-bright-blue))))
                           `(completions-first-difference ((t (:foreground ,uwu-bright-white))))
-                          `(dired-directory ((t (:weight bold :foreground ,uwu-blue))))
-                          `(ido-first-match ((t (:foreground ,uwu-yellow :weight bold))))
-                          `(ido-only-match ((t (:foreground ,uwu-green :weight bold))))
+                          `(ido-first-match ((t (:foreground ,uwu-blue :weight bold))))
+                          `(ido-only-match ((t (:foreground ,uwu-blue :weight bold))))
                           `(ido-subdir ((t (:foreground ,uwu-yellow))))
                           `(ido-indicator ((t (:foreground ,uwu-yellow :background ,uwu-bright-red))))))
-
-
 ;;;###autoload
 (and load-file-name
      (boundp 'custom-theme-load-path)
