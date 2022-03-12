@@ -21,8 +21,6 @@
 (defvar uwu-colors-alist
   '(("uwu-fg"                . "#C5C8C9")
     ("uwu-bg"                . "#131A1C")
-    ("uwu-highlight"         . "#2F3638")
-    ("uwu-comment"           . "#62686A")
     ("uwu-black"             . "#1B2224")
     ("uwu-red"               . "#F65B5B")
     ("uwu-green"             . "#6BB05D")
@@ -39,7 +37,10 @@
     ("uwu-bright-magenta"    . "#BB8FE5")
     ("uwu-bright-cyan"       . "#6DB0AD")
     ("uwu-bright-white"      . "#C5C8C9")
-    ("uwu-warning"           . "red")))
+    ("uwu-comment"           . "#62686A")
+    ("uwu-highlight"         . "#2F3638")
+    ("uwu-warning"           . "#E6D967")
+    ("uwu-error"             . "#E93D3D")))
 
 (defvar uwu-use-variable-pitch nil
   "When non-nil, use variable pitch face for some headings and titles.")
@@ -104,7 +105,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(font-lock-keyword-face ((t (:foreground ,uwu-magenta))))
                           `(font-lock-function-name-face ((t (:foreground ,uwu-blue))))
                           `(font-lock-string-face ((t (:foreground ,uwu-green))))
-                          `(font-lock-warning-face ((t (:inverse-video t :background ,uwu-white :foreground ,uwu-red))))
+                          `(font-lock-warning-face ((t (:inverse-video t :background ,uwu-bright-black :foreground ,uwu-warning))))
                           `(font-lock-type-face ((t (:weight bold :foreground ,uwu-yellow))))
                           `(font-lock-preprocessor-face ((t (:foreground ,uwu-blue))))
                           `(font-lock-builtin-face ((t (:weight bold :foreground ,uwu-yellow))))
@@ -117,8 +118,29 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(highline-face ((t (:background ,uwu-black))))
                           `(ac-selection-face ((t (:background ,uwu-magenta :foreground ,uwu-highlight))))
                           `(ac-candidate-face ((t (:background ,uwu-black :foreground ,uwu-white))))
-                          `(flyspell-duplicate ((t (:underline t :style wave :foreground ,uwu-magenta))))
-                          `(flyspell-incorrect ((t (:underline t :style wave :foreground ,uwu-red))))
+                          `(flymake-errline
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-red)
+                                          :inherit unspecified :foreground unspecified :background unspecified))
+                             (t (:foreground ,uwu-bright-red :weight bold :underline t))))
+                          `(flymake-warnline
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-yellow)
+                                          :inherit unspecified :foreground unspecified :background unspecified))
+                             (t (:foreground ,uwu-yellow :weight bold :underline t))))
+                          `(flymake-infoline
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-green)
+                                          :inherit unspecified :foreground unspecified :background unspecified))
+                             (t (:foreground ,uwu-bright-green :weight bold :underline t))))
+                          `(flyspell-duplicate
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-yellow) :inherit unspecified))
+                             (t (:foreground ,uwu-yellow :weight bold :underline t))))
+                          `(flyspell-incorrect
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-red) :inherit unspecified))
+                             (t (:foreground ,uwu-bright-red :weight bold :underline t))))
                           `(minibuffer-prompt ((t (:foreground ,uwu-yellow))))
                           `(menu ((t (:foreground ,uwu-fg :background ,uwu-bg))))
                           `(highlight ((t (:background ,uwu-highlight))))
@@ -199,7 +221,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(org-time-grid ((t (:foreground ,uwu-yellow))))
                           `(org-todo ((t (:weight bold :foreground ,uwu-red :weight bold))))
                           `(org-upcoming-deadline ((t (:inherit font-lock-keyword-face))))
-                          `(org-warning ((t (:weight bold :foreground ,uwu-red :weight bold :underline nil))))
+                          `(org-warning ((t (:weight bold :foreground ,uwu-warning :weight bold :underline nil))))
                           `(org-column ((t (:background ,uwu-bg))))
                           `(org-column-title ((t (:background ,uwu-bg :underline t :weight bold))))
                           `(org-mode-line-clock ((t (:foreground ,uwu-fg :background ,uwu-bg))))
@@ -225,6 +247,22 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(org-ref-cite-face ((t :underline t)))
                           `(org-ref-glossary-face ((t :underline t)))
                           `(org-ref-acronym-face ((t :underline t)))
+                          ;;;;; flycheck
+                          `(flycheck-error
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-error) :inherit unspecified))
+                             (t (:foreground ,uwu-error :weight bold :underline t))))
+                          `(flycheck-warning
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-warning) :inherit unspecified))
+                             (t (:foreground ,uwu-warning :weight bold :underline t))))
+                          `(flycheck-info
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-cyan) :inherit unspecified))
+                             (t (:foreground ,uwu-cyan :weight bold :underline t))))
+                          `(flycheck-fringe-error ((t (:foreground ,uwu-error :weight bold))))
+                          `(flycheck-fringe-warning ((t (:foreground ,uwu-warning :weight bold))))
+                          `(flycheck-fringe-info ((t (:foreground ,uwu-cyan :weight bold))))
                           ;;;;; company-mode
                           `(company-tooltip ((t (:foreground ,uwu-fg :background ,uwu-black))))
                           `(company-tooltip-annotation ((t (:foreground ,uwu-blue :background ,uwu-black))))
@@ -255,7 +293,16 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(term-color-white ((t (:foreground ,uwu-fg
                                                               :background ,uwu-white))))
                           '(term-default-fg-color ((t (:inherit term-color-white))))
-                          '(term-default-bg-color ((t (:inherit term-color-black))))))
+                          '(term-default-bg-color ((t (:inherit term-color-black))))
+                          ;;;;; vertico
+                          `(vertico-current ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
+                          `(vertico-multiline ((t (:foreground ,uwu-green :weight bold))))
+                          `(vertico-group-title ((t (:foreground ,uwu-green :weight bold))))
+                          `(vertico-group-separator ((t (:foreground ,uwu-green :weight bold))))
+                          ;;;;; selectrum
+                          `(selectrum-current-candidate ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
+                          `(selectrum-primary-highlight ((t (:background ,uwu-bright-green))))
+                          `(selectrum-secondary-highlight ((t (:background ,uwu-green))))))
 
 ;;;###autoload
 (and load-file-name
