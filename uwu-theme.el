@@ -307,7 +307,20 @@ Also bind `class' to ((class color) (min-colors 89))."
                           ;;;;; selectrum
                           `(selectrum-current-candidate ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
                           `(selectrum-primary-highlight ((t (:background ,uwu-bright-green))))
-                          `(selectrum-secondary-highlight ((t (:background ,uwu-green))))))
+                          `(selectrum-secondary-highlight ((t (:background ,uwu-green))))
+                          ;;;;; rainbow-delimiters
+                          `(rainbow-delimiters-depth-1-face ((t (:foreground ,uwu-bright-blue))))
+                          `(rainbow-delimiters-depth-2-face ((t (:foreground ,uwu-bright-green))))
+                          `(rainbow-delimiters-depth-3-face ((t (:foreground ,uwu-bright-magenta))))
+                          `(rainbow-delimiters-depth-4-face ((t (:foreground ,uwu-bright-yellow))))
+                          `(rainbow-delimiters-depth-5-face ((t (:foreground ,uwu-bright-red))))
+                          `(rainbow-delimiters-depth-6-face ((t (:foreground ,uwu-bright-cyan))))
+                          `(rainbow-delimiters-depth-7-face ((t (:foreground ,uwu-blue))))
+                          `(rainbow-delimiters-depth-8-face ((t (:foreground ,uwu-green))))
+                          `(rainbow-delimiters-depth-9-face ((t (:foreground ,uwu-magenta))))
+                          `(rainbow-delimiters-depth-10-face ((t (:foreground ,uwu-yellow))))
+                          `(rainbow-delimiters-depth-11-face ((t (:foreground ,uwu-red))))
+                          `(rainbow-delimiters-depth-12-face ((t (:foreground ,uwu-cyan))))))
 
 ;;;###autoload
 (and load-file-name
