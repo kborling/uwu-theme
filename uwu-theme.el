@@ -236,7 +236,26 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(company-scrollbar-fg ((t (:background ,uwu-black))))
                           `(company-scrollbar-bg ((t (:background ,uwu-bright-black))))
                           `(company-preview ((t (:background ,uwu-bright-green))))
-                          `(company-preview-common ((t (:foreground ,uwu-bright-green :background ,uwu-black))))))
+                          `(company-preview-common ((t (:foreground ,uwu-bright-green :background ,uwu-black))))
+                           ;;;;; term, ansi-term, vterm
+                          `(term-color-black ((t (:foreground ,uwu-bg
+                                                              :background ,uwu-bright-black))))
+                          `(term-color-red ((t (:foreground ,uwu-red
+                                                            :background ,uwu-bright-red))))
+                          `(term-color-green ((t (:foreground ,uwu-green
+                                                              :background ,uwu-bright-green))))
+                          `(term-color-yellow ((t (:foreground ,uwu-yellow
+                                                               :background ,uwu-bright-yellow))))
+                          `(term-color-blue ((t (:foreground ,uwu-blue
+                                                             :background ,uwu-bright-blue))))
+                          `(term-color-magenta ((t (:foreground ,uwu-magenta
+                                                                :background ,uwu-bright-magenta))))
+                          `(term-color-cyan ((t (:foreground ,uwu-cyan
+                                                             :background ,uwu-bright-cyan))))
+                          `(term-color-white ((t (:foreground ,uwu-fg
+                                                              :background ,uwu-white))))
+                          '(term-default-fg-color ((t (:inherit term-color-white))))
+                          '(term-default-bg-color ((t (:inherit term-color-black))))))
 
 ;;;###autoload
 (and load-file-name
