@@ -1,16 +1,19 @@
 ;;; uwu-theme.el --- An awesome dark color scheme  -*- lexical-binding: t; -*-
 
-;; Author: Kevin Borling <https://github.com/kborling>
+;; Copyright (C) 2021 Kevin Borling <kborling@protonmail.com>
+
+;; Author: Kevin Borling
 ;; Created: December 24, 2021
 ;; Version: 1.0.0
-;; Keywords: custom themes, faces
-;; URL: https://github.com/kborling/uwu.el
-;; Homepage: https://github.com/kborling/uwu.el
+;; Keywords: custom themes, dark, faces
+;; License: MIT
+;; URL: https://github.com/kborling/uwu-theme
+;; Homepage: https://github.com/kborling/uwu-theme
+;; Filename: uwu-theme.el
 ;; Package-Requires: ((emacs "24.1"))
 
 ;;; Commentary:
 
-;; Copyright (C) 2021 Kevin Borling
 ;; Inspired by uwu theme for vim <https://github.com/Mangeshrex/uwu.vim>
 
 ;;; Code:
@@ -332,7 +335,6 @@ Also bind `class' to ((class color) (min-colors 89))."
 (provide-theme 'uwu)
 
 ;; Local Variables:
-;; no-byte-compile: t
 ;; indent-tabs-mode: nil
 ;; End:
 ;;; uwu-theme.el ends here
