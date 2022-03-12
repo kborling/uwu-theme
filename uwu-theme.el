@@ -282,7 +282,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(company-preview-common ((t (:foreground ,uwu-bright-green :background ,uwu-black))))
                            ;;;;; term, ansi-term, vterm
                           `(term-color-black ((t (:foreground ,uwu-bg
-                                                              :background ,uwu-bright-black))))
+                                                              :background , uwu-bg))))
                           `(term-color-red ((t (:foreground ,uwu-red
                                                             :background ,uwu-bright-red))))
                           `(term-color-green ((t (:foreground ,uwu-green
@@ -296,9 +296,9 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(term-color-cyan ((t (:foreground ,uwu-cyan
                                                              :background ,uwu-bright-cyan))))
                           `(term-color-white ((t (:foreground ,uwu-fg
-                                                              :background ,uwu-white))))
-                          '(term-default-fg-color ((t (:inherit term-color-white))))
-                          '(term-default-bg-color ((t (:inherit term-color-black))))
+                                                              :background ,uwu-fg))))
+                          '(term-default-fg-color ((t (:inherit uwu-fg))))
+                          '(term-default-bg-color ((t (:inherit uwu-bg))))
                           ;;;;; vertico
                           `(vertico-current ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
                           `(vertico-multiline ((t (:foreground ,uwu-green :weight bold))))
