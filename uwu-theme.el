@@ -134,7 +134,8 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(mode-line ((t (:weight bold :background ,uwu-black :foreground ,uwu-bright-white))))
                           `(fringe ((t (:underline t :background ,uwu-bg :foreground ,uwu-highlight))))
                           `(fill-column-indicator ((,class :foreground ,uwu-highlight :weight semilight)))
-                          `(linum ((t (:underline t :foreground ,uwu-highlight))))
+                          `(linum ((t (:background ,uwu-black :foreground ,uwu-highlight))))
+                          `(line-number ((t (:background ,uwu-black :foreground ,uwu-highlight))))
                           `(header-line ((t (:foreground ,uwu-yellow
                                                          :background ,uwu-black
                                                          :box (:line-width -1 :style released-button)
