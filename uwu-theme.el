@@ -312,6 +312,11 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(selectrum-current-candidate ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
                           `(selectrum-primary-highlight ((t (:background ,uwu-bright-green))))
                           `(selectrum-secondary-highlight ((t (:background ,uwu-green))))
+                          ;;;;; orderless
+                          `(orderless-match-face-0 ((t (:foreground ,uwu-green))))
+                          `(orderless-match-face-1 ((t (:foreground ,uwu-magenta))))
+                          `(orderless-match-face-2 ((t (:foreground ,uwu-blue))))
+                          `(orderless-match-face-3 ((t (:foreground ,uwu-yellow))))
                           ;;;;; rainbow-delimiters
                           `(rainbow-delimiters-depth-1-face ((t (:foreground ,uwu-bright-blue))))
                           `(rainbow-delimiters-depth-2-face ((t (:foreground ,uwu-bright-green))))
