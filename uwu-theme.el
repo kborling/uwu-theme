@@ -312,7 +312,26 @@ Also bind `class' to ((class color) (min-colors 89))."
                                                               :background ,uwu-fg))))
                           '(term-default-fg-color ((t (:inherit uwu-fg))))
                           '(term-default-bg-color ((t (:inherit uwu-bg))))
-                          ;;;;; vertico
+                          ;; diff-mode
+                          `(diff-added ((t (:foreground ,uwu-bright-green :background: ,uwu-black :extend t))))
+                          `(diff-changed ((t  (:foreground ,uwu-warning :background: ,uwu-black :extend t))))
+                          `(diff-removed ((t (:foreground ,uwu-error :background: ,uwu-black :extend t))))
+                          `(diff-indicator-added ((t (:inherit diff-added))))
+                          `(diff-indicator-changed ((t (:inherit diff-changed))))
+                          `(diff-indicator-removed ((t (:inherit diff-removed))))
+                          `(diff-refine-added   ((t (:background ,uwu-bright-green :foreground ,uwu-black))))
+                          `(diff-refine-changed ((t (:background ,uwu-warning :foreground ,uwu-black))))
+                          `(diff-refine-removed ((t (:background ,uwu-error :foreground ,uwu-black))))
+                          `(diff-header ((,class (:background ,uwu-black))
+                                         (t (:background ,uwu-fg :foreground ,uwu-bg))))
+                          `(diff-file-header
+                            ((,class (:background ,uwu-black :foreground ,uwu-fg :weight bold))
+                             (t (:background ,uwu-fg :foreground ,uwu-bg :weight bold))))
+                          ;;;;; diff-hl
+                          `(diff-hl-change ((,class (:inverse-video t :foreground ,uwu-warning :background ,uwu-bg))))
+                          `(diff-hl-delete ((,class (:inverse-video t :foreground ,uwu-error :background ,uwu-bg))))
+                          `(diff-hl-insert ((,class (:inverse-video t :foreground ,uwu-bright-green :background ,uwu-bg))))
+                           ;;;;; vertico
                           `(vertico-current ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
                           `(vertico-multiline ((t (:foreground ,uwu-green :weight bold))))
                           `(vertico-group-title ((t (:foreground ,uwu-green :weight bold))))
