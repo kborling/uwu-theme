@@ -337,8 +337,8 @@ Also bind `class' to ((class color) (min-colors 89))."
                                                          :foreground ,uwu-magenta
                                                          :box (:line-width 1 :style released-button)))))
                           `(tab-bar-tab-inactive ((t (:inherit tab-bar-tab
-                                                               :background ,uwu-comment
-                                                               :foreground ,uwu-black))))
+                                                               :background ,uwu-black
+                                                               :foreground ,uwu-comment))))
 
                           ;; tab-line
                           `(tab-line ((t (:foreground ,uwu-white :background ,uwu-black))))
@@ -347,8 +347,8 @@ Also bind `class' to ((class color) (min-colors 89))."
                                                           :foreground ,uwu-magenta
                                                           :box (:line-width 1 :style released-button)))))
                           `(tab-line-tab-inactive ((t (:inherit tab-line-tab
-                                                                :background ,uwu-comment
-                                                                :foreground ,uwu-black))))
+                                                                :background ,uwu-black
+                                                                :foreground ,uwu-comment))))
                           ;;;;; vertico
                           `(vertico-current ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
                           `(vertico-multiline ((t (:foreground ,uwu-green :weight bold))))
