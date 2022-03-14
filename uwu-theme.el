@@ -245,8 +245,9 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(org-level-5 ((t (:inherit ,z-variable-pitch :foreground ,uwu-blue
                                                       ,@(when uwu-scale-org-headlines
                                                           (list :height uwu-height-plus-2))))))
-                          `(org-level-6 ((t (:inherit ,z-variable-pitch :foreground ,uwu-green                                                       ,@(when uwu-scale-org-headlines
-                                                                                                                                                         (list :height uwu-height-plus-1))))))
+                          `(org-level-6 ((t (:inherit ,z-variable-pitch :foreground ,uwu-green
+                                                      ,@(when uwu-scale-org-headlines
+                                                          (list :height uwu-height-plus-1))))))
                           `(org-level-7 ((t (:inherit ,z-variable-pitch :foreground ,uwu-magenta))))
                           `(org-level-8 ((t (:inherit ,z-variable-pitch :foreground ,uwu-red))))
                           `(org-link ((t (:foreground ,uwu-blue :underline t))))
