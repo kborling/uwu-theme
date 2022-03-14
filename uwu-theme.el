@@ -125,14 +125,14 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(ac-candidate-face ((t (:background ,uwu-black :foreground ,uwu-white))))
                           `(flymake-errline
                             ((((supports :underline (:style wave)))
-                              (:underline (:style wave :color ,uwu-red)
+                              (:underline (:style wave :color ,uwu-error)
                                           :inherit unspecified :foreground unspecified :background unspecified))
-                             (t (:foreground ,uwu-bright-red :weight bold :underline t))))
+                             (t (:foreground ,uwu-error :weight bold :underline t))))
                           `(flymake-warnline
                             ((((supports :underline (:style wave)))
-                              (:underline (:style wave :color ,uwu-yellow)
+                              (:underline (:style wave :color ,uwu-warning)
                                           :inherit unspecified :foreground unspecified :background unspecified))
-                             (t (:foreground ,uwu-yellow :weight bold :underline t))))
+                             (t (:foreground ,uwu-warning :weight bold :underline t))))
                           `(flymake-infoline
                             ((((supports :underline (:style wave)))
                               (:underline (:style wave :color ,uwu-green)
