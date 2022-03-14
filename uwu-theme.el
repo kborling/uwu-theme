@@ -61,26 +61,38 @@
   :group 'uwu-theme
   :package-version '(uwu . "1.0"))
 
-(defcustom uwu-height-plus-1 1.1
+(defcustom uwu-height-plus-1 1.075
   "Font size +1."
   :type 'number
   :group 'uwu-theme
   :package-version '(uwu . "1.0"))
 
-(defcustom uwu-height-plus-2 1.15
+(defcustom uwu-height-plus-2 1.1
+  "Font size +1."
+  :type 'number
+  :group 'uwu-theme
+  :package-version '(uwu . "1.0"))
+
+(defcustom uwu-height-plus-3 1.125
   "Font size +2."
   :type 'number
   :group 'uwu-theme
   :package-version '(uwu . "1.0"))
 
-(defcustom uwu-height-plus-3 1.2
+(defcustom uwu-height-plus-4 1.15
   "Font size +3."
   :type 'number
   :group 'uwu-theme
   :package-version '(uwu . "1.0"))
 
-(defcustom uwu-height-plus-4 1.3
+(defcustom uwu-height-plus-5 1.2
   "Font size +4."
+  :type 'number
+  :group 'uwu-theme
+  :package-version '(uwu . "1.0"))
+
+(defcustom uwu-height-plus-6 1.3
+  "Font size +5."
   :type 'number
   :group 'uwu-theme
   :package-version '(uwu . "1.0"))
@@ -214,23 +226,27 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(org-done ((t (:weight bold :weight bold :foreground ,uwu-green))))
                           `(org-formula ((t (:foreground ,uwu-yellow))))
                           `(org-headline-done ((t (:foreground ,uwu-green))))
-                          `(org-hide ((t (:foreground ,uwu-bg))))
+                          `(org-hide ((t (:background ,uwu-bg :foreground ,uwu-bg))))
                           `(org-verbatim ((t (:foreground ,uwu-bright-yellow))))
                           `(org-meta-line ((t (:foreground ,uwu-comment))))
+                          `(org-indent ((t (:background ,uwu-bg :foreground ,uwu-bg))))
                           `(org-level-1 ((t (:inherit ,z-variable-pitch :foreground ,uwu-bright-blue
                                                       ,@(when uwu-scale-org-headlines
-                                                          (list :height uwu-height-plus-4))))))
+                                                          (list :height uwu-height-plus-6))))))
                           `(org-level-2 ((t (:inherit ,z-variable-pitch :foreground ,uwu-bright-green
                                                       ,@(when uwu-scale-org-headlines
-                                                          (list :height uwu-height-plus-3))))))
+                                                          (list :height uwu-height-plus-5))))))
                           `(org-level-3 ((t (:inherit ,z-variable-pitch :foreground ,uwu-bright-magenta
                                                       ,@(when uwu-scale-org-headlines
-                                                          (list :height uwu-height-plus-2))))))
+                                                          (list :height uwu-height-plus-4))))))
                           `(org-level-4 ((t (:inherit ,z-variable-pitch :foreground ,uwu-bright-red
                                                       ,@(when uwu-scale-org-headlines
-                                                          (list :height uwu-height-plus-1))))))
-                          `(org-level-5 ((t (:inherit ,z-variable-pitch :foreground ,uwu-blue))))
-                          `(org-level-6 ((t (:inherit ,z-variable-pitch :foreground ,uwu-green))))
+                                                          (list :height uwu-height-plus-3))))))
+                          `(org-level-5 ((t (:inherit ,z-variable-pitch :foreground ,uwu-blue
+                                                      ,@(when uwu-scale-org-headlines
+                                                          (list :height uwu-height-plus-2))))))
+                          `(org-level-6 ((t (:inherit ,z-variable-pitch :foreground ,uwu-green                                                       ,@(when uwu-scale-org-headlines
+                                                                                                                                                         (list :height uwu-height-plus-1))))))
                           `(org-level-7 ((t (:inherit ,z-variable-pitch :foreground ,uwu-magenta))))
                           `(org-level-8 ((t (:inherit ,z-variable-pitch :foreground ,uwu-red))))
                           `(org-link ((t (:foreground ,uwu-blue :underline t))))
