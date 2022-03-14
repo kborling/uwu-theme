@@ -331,7 +331,25 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(diff-hl-change ((,class (:inverse-video t :foreground ,uwu-warning :background ,uwu-bg))))
                           `(diff-hl-delete ((,class (:inverse-video t :foreground ,uwu-error :background ,uwu-bg))))
                           `(diff-hl-insert ((,class (:inverse-video t :foreground ,uwu-bright-green :background ,uwu-bg))))
-                           ;;;;; vertico
+                          ;; tab-bar
+                          `(tab-bar ((t (:height 1.1 :foreground ,uwu-white :background ,uwu-black))))
+                          `(tab-bar-tab ((t (:background ,uwu-black
+                                                         :foreground ,uwu-magenta
+                                                         :box (:line-width 1 :style released-button)))))
+                          `(tab-bar-tab-inactive ((t (:inherit tab-bar-tab
+                                                               :background ,uwu-comment
+                                                               :foreground ,uwu-black))))
+
+                          ;; tab-line
+                          `(tab-line ((t (:foreground ,uwu-white :background ,uwu-black))))
+                          `(tab-line-close-highlight ((t (:foreground ,uwu-red))))
+                          `(tab-line-tab ((t (:background ,uwu-black
+                                                          :foreground ,uwu-magenta
+                                                          :box (:line-width 1 :style released-button)))))
+                          `(tab-line-tab-inactive ((t (:inherit tab-line-tab
+                                                                :background ,uwu-comment
+                                                                :foreground ,uwu-black))))
+                          ;;;;; vertico
                           `(vertico-current ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
                           `(vertico-multiline ((t (:foreground ,uwu-green :weight bold))))
                           `(vertico-group-title ((t (:foreground ,uwu-green :weight bold))))
