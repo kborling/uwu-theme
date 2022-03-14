@@ -203,7 +203,10 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(org-agenda-structure
                             ((t (:inherit font-lock-comment-face))))
                           `(org-archived ((t (:foreground ,uwu-fg :weight bold))))
-                          `(org-block ((t (:background ,uwu-bg :extend t))))
+                          `(org-block ((t (:background ,uwu-black :foreground ,uwu-white :extend t))))
+                          `(org-block-begin-line ((t (:foreground ,uwu-comment :background ,uwu-black :extend t))))
+                          `(org-block-end-line ((t (:foreground ,uwu-comment :background ,uwu-black :extend t))))
+                          `(org-code ((t (:foreground ,uwu-bright-yellow ))))
                           `(org-checkbox ((t (:background ,uwu-bg :foreground ,uwu-fg
                                                           :box (:line-width 1 :style released-button)))))
                           `(org-date ((t (:foreground ,uwu-blue :underline t))))
@@ -212,6 +215,8 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(org-formula ((t (:foreground ,uwu-yellow))))
                           `(org-headline-done ((t (:foreground ,uwu-green))))
                           `(org-hide ((t (:foreground ,uwu-bg))))
+                          `(org-verbatim ((t (:foreground ,uwu-bright-yellow))))
+                          `(org-meta-line ((t (:foreground ,uwu-comment))))
                           `(org-level-1 ((t (:inherit ,z-variable-pitch :foreground ,uwu-bright-blue
                                                       ,@(when uwu-scale-org-headlines
                                                           (list :height uwu-height-plus-4))))))
@@ -228,7 +233,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(org-level-6 ((t (:inherit ,z-variable-pitch :foreground ,uwu-green))))
                           `(org-level-7 ((t (:inherit ,z-variable-pitch :foreground ,uwu-magenta))))
                           `(org-level-8 ((t (:inherit ,z-variable-pitch :foreground ,uwu-red))))
-                          `(org-link ((t (:foreground ,uwu-yellow :underline t))))
+                          `(org-link ((t (:foreground ,uwu-blue :underline t))))
                           `(org-scheduled ((t (:foreground ,uwu-green))))
                           `(org-scheduled-previously ((t (:foreground ,uwu-red))))
                           `(org-scheduled-today ((t (:foreground ,uwu-blue))))
@@ -246,11 +251,12 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(org-mode-line-clock-overrun ((t (:foreground ,uwu-bg :background ,uwu-red))))
                           `(org-ellipsis ((t (:foreground ,uwu-yellow :underline t))))
                           `(org-footnote ((t (:foreground ,uwu-cyan :underline t))))
-                          `(org-document-title ((t (:inherit ,z-variable-pitch :foreground ,uwu-blue
+                          `(org-document-title ((t (:inherit ,z-variable-pitch :foreground ,uwu-bright-blue
                                                              :weight bold
                                                              ,@(when uwu-scale-org-headlines
                                                                  (list :height uwu-height-plus-4))))))
-                          `(org-document-info ((t (:foreground ,uwu-blue))))
+                          `(org-document-info ((t (:foreground ,uwu-magenta))))
+                          `(org-document-info-keyword ((t (:foreground ,uwu-comment))))
                           `(org-habit-ready-face ((t :background ,uwu-green)))
                           `(org-habit-alert-face ((t :background ,uwu-yellow :foreground ,uwu-bg)))
                           `(org-habit-clear-face ((t :background ,uwu-blue)))
