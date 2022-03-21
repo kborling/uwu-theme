@@ -12,8 +12,8 @@ An awesome dark color scheme for emacs.
 
 ## Installation
 
-### Using ~package-install~
-~uwu-theme~ is available from [[https://melpa.org/#/uwu-theme][MELPA]], such that it can be installed directly via ~package-install~.
+### Using package-install
+`uwu-theme` is available from [[https://melpa.org/#/uwu-theme][MELPA]], such that it can be installed directly via `package-install`.
 
 1. `M-x: package-install RET uwu-theme RET`.
 2. Add the following code in your emacs config file:
