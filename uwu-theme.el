@@ -332,7 +332,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(company-tooltip ((t (:foreground ,uwu-fg :background ,uwu-black))))
                           `(company-tooltip-annotation ((t (:foreground ,uwu-blue :background ,uwu-black))))
                           `(company-tooltip-annotation-selection ((t (:foreground ,uwu-blue :background ,uwu-black))))
-                          `(company-tooltip-selection ((t (:foreground ,uwu-fg :background ,uwu-black))))
+                          `(company-tooltip-selection ((t (:foreground ,uwu-bright-white :background ,uwu-highlight))))
                           `(company-tooltip-mouse ((t (:background ,uwu-black))))
                           `(company-tooltip-common ((t (:foreground ,uwu-green))))
                           `(company-tooltip-common-selection ((t (:foreground ,uwu-green))))
