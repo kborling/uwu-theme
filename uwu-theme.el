@@ -252,7 +252,6 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(org-archived ((t (:foreground ,uwu-fg :weight bold))))
                           `(org-block ((t (:background ,uwu-black :foreground ,uwu-white :extend t))))
                           `(org-block-begin-line ((t (:foreground ,uwu-comment :background ,uwu-black :extend t))))
-                          `(org-block-end-line ((t (:foreground ,uwu-comment :background ,uwu-black :extend t))))
                           `(org-code ((t (:foreground ,uwu-bright-yellow ))))
                           `(org-checkbox ((t (:background ,uwu-bg :foreground ,uwu-fg
                                                           :box (:line-width 1 :style released-button)))))
