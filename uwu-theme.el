@@ -79,6 +79,12 @@
 (defvar uwu-scale-outline-headlines nil
   "Whether `outline-mode' headlines should be scaled.")
 
+(defcustom uwu-distinct-line-numbers t
+  "Whether line numbers should look distinct."
+  :type 'boolean
+  :group 'uwu-theme
+  :package-version '(uwu . "1.0"))
+
 (defcustom uwu-height-minus-1 0.8
   "Font size -1."
   :type 'number
@@ -207,8 +213,12 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(fringe ((t (:underline t :background ,uwu-bg :foreground ,uwu-highlight))))
                           `(fill-column-indicator ((,class :foreground ,uwu-highlight :weight semilight)))
                           `(linum ((t (:background ,uwu-black :foreground ,uwu-white))))
-                          `(line-number ((t (:background ,uwu-black :foreground ,uwu-white))))
-                          `(line-number-current-line ((t (:inherit line-number :background ,uwu-highlight :foreground ,uwu-bright-white))))
+                          `(line-number ((t (:foreground ,(if uwu-distinct-line-numbers uwu-white uwu-comment)
+                                                         ,@(when uwu-distinct-line-numbers
+                                                             (list :background uwu-black))))))
+                          `(line-number-current-line ((t (:inherit line-number :foreground ,(if uwu-distinct-line-numbers uwu-bright-white uwu-white)
+                                                                   ,@(when uwu-distinct-line-numbers
+                                                                       (list :background uwu-highlight))))))
                           `(header-line ((t (:foreground ,uwu-yellow
                                                          :background ,uwu-black
                                                          :box (:line-width -1 :style released-button)
@@ -241,7 +251,6 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(org-archived ((t (:foreground ,uwu-fg :weight bold))))
                           `(org-block ((t (:background ,uwu-black :foreground ,uwu-white :extend t))))
                           `(org-block-begin-line ((t (:foreground ,uwu-comment :background ,uwu-black :extend t))))
-                          `(org-block-end-line ((t (:foreground ,uwu-comment :background ,uwu-black :extend t))))
                           `(org-code ((t (:foreground ,uwu-bright-yellow ))))
                           `(org-checkbox ((t (:background ,uwu-bg :foreground ,uwu-fg
                                                           :box (:line-width 1 :style released-button)))))
