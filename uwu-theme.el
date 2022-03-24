@@ -80,11 +80,10 @@
   "Whether `outline-mode' headlines should be scaled.")
 
 (defcustom uwu-distinct-line-numbers t
-  "Make line numbers distinct."
+  "Whether line numbers should look distinct."
   :type 'boolean
   :group 'uwu-theme
-  :package-version '(uwu . "1.0")
-  )
+  :package-version '(uwu . "1.0"))
 
 (defcustom uwu-height-minus-1 0.8
   "Font size -1."
