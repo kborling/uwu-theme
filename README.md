@@ -91,9 +91,11 @@ If you prefer to use a variable pitch font for headlines, add the following opti
 
 ### Scaled Org/Outline Headlines
 By default, the Org/Outline headlines will look like the following:
+
 ![UwU scaled Org headlines](https://github.com/kborling/uwu.el/blob/main/assets/org_headlines.png)
 
 If you'd like to scale the headlines (Level 1-8), you can enable scaled headlines to achieve the following:
+
 ![UwU scaled Org headlines](https://github.com/kborling/uwu.el/blob/main/assets/scaled_org_headlines.png)
 
 To use scaled headlines, add the following option to your emacs config file:
@@ -106,9 +108,11 @@ To use scaled headlines, add the following option to your emacs config file:
 
 ### Distinct Line Numbers
 By default, the line numbers are distinct and look like the following:
+
 ![UwU distinct line numbers](https://github.com/kborling/uwu.el/blob/main/assets/distinct_line_numbers.png)
 
 If you prefer a less distracting line number style, you can disable the distinct line numbers style to achieve the following:
+
 ![UwU subtle line numbers](https://github.com/kborling/uwu.el/blob/main/assets/subtle_line_numbers.png)
 
 To use the less distracting line number style, add the following option to your emacs config file:
