@@ -2,7 +2,7 @@
 An awesome dark color scheme for emacs.
 
 ## Screenshot
-![UwU emacs theme](https://github.com/kborling/uwu.el/blob/main/uwu.png)
+![UwU emacs theme](https://github.com/kborling/uwu.el/blob/main/assets/uwu.png)
 
 ## Try It
 
@@ -76,6 +76,45 @@ An awesome dark color scheme for emacs.
    ```elisp
       dotspacemacs-themes '(uwu)
    ```
+
+## Options
+
+### Variable Pitch Font
+If you prefer to use a variable pitch font for headlines, add the following option to your emacs config file:
+```elisp
+;; Set the variable pitch font
+(set-face-attribute 'variable-pitch nil
+                    :family "Roboto" :height 130 :weight 'semibold)
+;; Enable the use of the variable pitch font
+(setq uwu-use-variable-pitch 1)
+```
+
+### Scaled Org/Outline Headlines
+By default, the Org/Outline headlines will look like the following:
+![UwU scaled Org headlines](https://github.com/kborling/uwu.el/blob/main/assets/org_headlines.png)
+
+If you'd like to scale the headlines (Level 1-8), you can enable scaled headlines to achieve the following:
+![UwU scaled Org headlines](https://github.com/kborling/uwu.el/blob/main/assets/scaled_org_headlines.png)
+
+To use scaled headlines, add the following option to your emacs config file:
+```elisp
+;; Scale org-mode headlines
+(setq uwu-scale-org-headlines 1)
+;; Scale outline-mode headlines
+(setq uwu-scale-outline-headlines 1)
+```
+
+### Distinct Line Numbers
+By default, the line numbers are distinct and look like the following:
+![UwU distinct line numbers](https://github.com/kborling/uwu.el/blob/main/assets/distinct_line_numbers.png)
+
+If you prefer a less distracting line number style, you can disable the distinct line numbers style to achieve the following:
+![UwU subtle line numbers](https://github.com/kborling/uwu.el/blob/main/assets/subtle_line_numbers.png)
+
+To use the less distracting line number style, add the following option to your emacs config file:
+```elisp
+(setq uwu-distinct-line-numbers 'nil)
+```
 
 ## Acknowledgments
 - Inspiration and Color Scheme based on https://github.com/Mangeshrex/uwu.vim
