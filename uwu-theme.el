@@ -419,6 +419,8 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(orderless-match-face-1 ((t (:foreground ,uwu-magenta))))
                           `(orderless-match-face-2 ((t (:foreground ,uwu-blue))))
                           `(orderless-match-face-3 ((t (:foreground ,uwu-yellow))))
+                          ;;;;; helpful
+                          `(helpful-heading ((t (:foreground ,uwu-bright-green :height 1.2))))
                           ;;;;; rainbow-delimiters
                           `(rainbow-delimiters-depth-1-face ((t (:foreground ,uwu-bright-blue))))
                           `(rainbow-delimiters-depth-2-face ((t (:foreground ,uwu-bright-green))))
