@@ -530,16 +530,6 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(message-cited-text-3 ((t (:foreground ,uwu-yellow))))
                           `(message-cited-text-4 ((t (:foreground ,uwu-red))))
                           `(mm-uu-extract ((t (:background ,uwu-black :foreground ,uwu-bright-green))))
-                          ;; mu4e
-                          `(mu4e-cited-1-face ((t (:foreground ,uwu-blue    :slant italic))))
-                          `(mu4e-cited-2-face ((t (:foreground ,uwu-bright-green :slant italic))))
-                          `(mu4e-cited-3-face ((t (:foreground ,uwu-bright-blue  :slant italic))))
-                          `(mu4e-cited-4-face ((t (:foreground ,uwu-green   :slant italic))))
-                          `(mu4e-cited-5-face ((t (:foreground ,uwu-bright-blue  :slant italic))))
-                          `(mu4e-cited-6-face ((t (:foreground ,uwu-bright-green :slant italic))))
-                          `(mu4e-cited-7-face ((t (:foreground ,uwu-blue    :slant italic))))
-                          `(mu4e-replied-face ((t (:foreground ,uwu-comment))))
-                          `(mu4e-trashed-face ((t (:foreground ,uwu-comment :strike-through t))))
                           ;; notmuch
                           `(notmuch-crypto-decryption ((t (:foreground ,uwu-bg :background ,uwu-magenta))))
                           `(notmuch-crypto-part-header ((t (:foreground ,uwu-bright-blue))))
@@ -567,6 +557,12 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(notmuch-tree-match-tag-face ((t (:foreground ,uwu-cyan))))
                           `(notmuch-tree-no-match-face ((t (:inherit font-lock-comment-face))))
                           ;; mu4e
+                          ;; mu4e
+                          `(mu4e-unread-face ((t (:foreground ,uwu-green :weight normal))))
+                          `(mu4e-replied-face ((t (:foreground ,uwu-comment))))
+                          `(mu4e-flagged-face ((t (:foreground ,uwu-blue :weight normal))))
+                          `(mu4e-warning-face ((t (:foreground ,uwu-red :slant normal :weight bold))))
+                          `(mu4e-trashed-face ((t (:foreground ,uwu-comment :strike-through t))))
                           `(mu4e-cited-1-face ((t (:foreground ,uwu-bright-blue :slant italic :weight normal))))
                           `(mu4e-cited-2-face ((t (:foreground ,uwu-bright-green :slant italic :weight normal))))
                           `(mu4e-cited-3-face ((t (:foreground ,uwu-bright-magenta :slant italic :weight normal))))
@@ -574,10 +570,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(mu4e-cited-5-face ((t (:foreground ,uwu-blue :slant italic :weight normal))))
                           `(mu4e-cited-6-face ((t (:foreground ,uwu-green :slant italic :weight normal))))
                           `(mu4e-cited-7-face ((t (:foreground ,uwu-magenta :slant italic :weight normal))))
-                          `(mu4e-flagged-face ((t (:foreground ,uwu-blue :weight normal))))
-                          `(mu4e-unread-face ((t (:foreground ,uwu-green :weight normal))))
                           `(mu4e-view-url-number-face ((t (:foreground ,uwu-yellow :weight normal))))
-                          `(mu4e-warning-face ((t (:foreground ,uwu-red :slant normal :weight bold))))
                           `(mu4e-header-highlight-face
                             ((t (,@(and (>= emacs-major-version 27) '(:extend t))
                                  :inherit unspecified
