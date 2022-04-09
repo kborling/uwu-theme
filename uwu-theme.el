@@ -79,6 +79,9 @@
 (defvar uwu-scale-outline-headlines nil
   "Whether `outline-mode' headlines should be scaled.")
 
+(defvar uwu-scale-shr-headlines nil
+  "Whether `shr' headlines should be scaled.")
+
 (defcustom uwu-distinct-line-numbers t
   "Whether line numbers should look distinct."
   :type 'boolean
@@ -243,7 +246,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(ido-only-match ((t (:foreground ,uwu-blue :weight bold))))
                           `(ido-subdir ((t (:foreground ,uwu-yellow))))
                           `(ido-indicator ((t (:foreground ,uwu-yellow :background ,uwu-bright-red))))
-                           ;;;;; org-mode
+                          ;; org-mode
                           `(org-agenda-date-today
                             ((t (:foreground ,uwu-fg :slant italic :weight bold))) t)
                           `(org-agenda-structure
@@ -315,13 +318,13 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(org-habit-ready-future-face ((t :background ,uwu-green)))
                           `(org-habit-alert-future-face ((t :background ,uwu-yellow :foreground ,uwu-bg)))
                           `(org-habit-overdue-future-face ((t :background ,uwu-red)))
-                          ;;;;; org-ref
+                          ;; org-ref
                           `(org-ref-ref-face ((t :underline t)))
                           `(org-ref-label-face ((t :underline t)))
                           `(org-ref-cite-face ((t :underline t)))
                           `(org-ref-glossary-face ((t :underline t)))
                           `(org-ref-acronym-face ((t :underline t)))
-                          ;;;;; flycheck
+                          ;; flycheck
                           `(flycheck-error
                             ((((supports :underline (:style wave)))
                               (:underline (:style wave :color ,uwu-error) :inherit unspecified))
@@ -337,7 +340,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(flycheck-fringe-error ((t (:foreground ,uwu-error :weight bold))))
                           `(flycheck-fringe-warning ((t (:foreground ,uwu-warning :weight bold))))
                           `(flycheck-fringe-info ((t (:foreground ,uwu-cyan :weight bold))))
-                          ;;;;; company-mode
+                          ;; company-mode
                           `(company-tooltip ((t (:foreground ,uwu-fg :background ,uwu-black))))
                           `(company-tooltip-annotation ((t (:foreground ,uwu-blue :background ,uwu-black))))
                           `(company-tooltip-annotation-selection ((t (:foreground ,uwu-blue :background ,uwu-black))))
@@ -349,7 +352,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(company-scrollbar-bg ((t (:background ,uwu-bright-black))))
                           `(company-preview ((t (:background ,uwu-bright-green))))
                           `(company-preview-common ((t (:foreground ,uwu-bright-green :background ,uwu-black))))
-                           ;;;;; term, ansi-term, vterm
+                          ;; term, ansi-term, vterm
                           `(term-color-black ((t (:foreground ,uwu-bg
                                                               :background , uwu-bg))))
                           `(term-color-red ((t (:foreground ,uwu-red
@@ -383,7 +386,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(diff-file-header
                             ((,class (:background ,uwu-black :foreground ,uwu-fg :weight bold))
                              (t (:background ,uwu-fg :foreground ,uwu-bg :weight bold))))
-                          ;;;;; diff-hl
+                          ;; diff-hl
                           `(diff-hl-change ((,class (:inverse-video t :foreground ,uwu-warning :background ,uwu-bg))))
                           `(diff-hl-delete ((,class (:inverse-video t :foreground ,uwu-error :background ,uwu-bg))))
                           `(diff-hl-insert ((,class (:inverse-video t :foreground ,uwu-bright-green :background ,uwu-bg))))
@@ -405,23 +408,23 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(tab-line-tab-inactive ((t (:inherit tab-line-tab
                                                                 :background ,uwu-black
                                                                 :foreground ,uwu-comment))))
-                          ;;;;; vertico
+                          ;; vertico
                           `(vertico-current ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
                           `(vertico-multiline ((t (:foreground ,uwu-green :weight bold))))
                           `(vertico-group-title ((t (:foreground ,uwu-green :weight bold))))
                           `(vertico-group-separator ((t (:foreground ,uwu-green :weight bold))))
-                          ;;;;; selectrum
+                          ;; selectrum
                           `(selectrum-current-candidate ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
                           `(selectrum-primary-highlight ((t (:background ,uwu-bright-green))))
                           `(selectrum-secondary-highlight ((t (:background ,uwu-green))))
-                          ;;;;; orderless
+                          ;; orderless
                           `(orderless-match-face-0 ((t (:foreground ,uwu-green))))
                           `(orderless-match-face-1 ((t (:foreground ,uwu-magenta))))
                           `(orderless-match-face-2 ((t (:foreground ,uwu-blue))))
                           `(orderless-match-face-3 ((t (:foreground ,uwu-yellow))))
-                          ;;;;; helpful
+                          ;; helpful
                           `(helpful-heading ((t (:foreground ,uwu-bright-green :height 1.2))))
-                          ;;;;; rainbow-delimiters
+                          ;; rainbow-delimiters
                           `(rainbow-delimiters-depth-1-face ((t (:foreground ,uwu-bright-blue))))
                           `(rainbow-delimiters-depth-2-face ((t (:foreground ,uwu-bright-green))))
                           `(rainbow-delimiters-depth-3-face ((t (:foreground ,uwu-bright-magenta))))
@@ -433,7 +436,158 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(rainbow-delimiters-depth-9-face ((t (:foreground ,uwu-magenta))))
                           `(rainbow-delimiters-depth-10-face ((t (:foreground ,uwu-yellow))))
                           `(rainbow-delimiters-depth-11-face ((t (:foreground ,uwu-red))))
-                          `(rainbow-delimiters-depth-12-face ((t (:foreground ,uwu-cyan))))))
+                          `(rainbow-delimiters-depth-12-face ((t (:foreground ,uwu-cyan))))
+                          ;; gnus
+                          `(gnus-group-mail-1 ((t (:weight bold :inherit gnus-group-mail-1-empty))))
+                          `(gnus-group-mail-1-empty ((t (:inherit gnus-group-news-1-empty))))
+                          `(gnus-group-mail-2 ((t (:weight bold :inherit gnus-group-mail-2-empty))))
+                          `(gnus-group-mail-2-empty ((t (:inherit gnus-group-news-2-empty))))
+                          `(gnus-group-mail-3 ((t (:weight bold :inherit gnus-group-mail-3-empty))))
+                          `(gnus-group-mail-3-empty ((t (:inherit gnus-group-news-3-empty))))
+                          `(gnus-group-mail-low ((t (:weight bold :inherit gnus-group-mail-low-empty))))
+                          `(gnus-group-mail-low-empty ((t (:inherit gnus-group-news-low-empty))))
+                          `(gnus-group-news-1 ((t (:weight bold :inherit gnus-group-news-1-empty))))
+                          `(gnus-group-news-2 ((t (:weight bold :inherit gnus-group-news-2-empty))))
+                          `(gnus-group-news-3 ((t (:weight bold :inherit gnus-group-news-3-empty))))
+                          `(gnus-group-news-4 ((t (:weight bold :inherit gnus-group-news-4-empty))))
+                          `(gnus-group-news-5 ((t (:weight bold :inherit gnus-group-news-5-empty))))
+                          `(gnus-group-news-6 ((t (:weight bold :inherit gnus-group-news-6-empty))))
+                          `(gnus-group-news-low ((t (:weight bold :inherit gnus-group-news-low-empty))))
+                          `(gnus-header-content ((t (:inherit message-header-other))))
+                          `(gnus-header-from ((t (:inherit message-header-other))))
+                          `(gnus-header-name ((t (:inherit message-header-name))))
+                          `(gnus-header-newsgroups ((t (:inherit message-header-other))))
+                          `(gnus-header-subject ((t (:inherit message-header-subject))))
+                          `(gnus-summary-cancelled ((t (:foreground ,uwu-yellow))))
+                          `(gnus-summary-high-ancient ((t (:foreground ,uwu-blue :weight bold))))
+                          `(gnus-summary-high-read ((t (:foreground ,uwu-green :weight bold))))
+                          `(gnus-summary-high-ticked ((t (:foreground ,uwu-yellow :weight bold))))
+                          `(gnus-summary-high-unread ((t (:foreground ,uwu-black :weight bold))))
+                          `(gnus-summary-low-ancient ((t (:foreground ,uwu-blue))))
+                          `(gnus-summary-low-read ((t (:foreground ,uwu-green))))
+                          `(gnus-summary-low-ticked ((t (:foreground ,uwu-yellow))))
+                          `(gnus-summary-low-unread ((t (:foreground ,uwu-black))))
+                          `(gnus-summary-normal-ancient ((t (:foreground ,uwu-blue))))
+                          `(gnus-summary-normal-read ((t (:foreground ,uwu-green))))
+                          `(gnus-summary-normal-ticked ((t (:foreground ,uwu-yellow))))
+                          `(gnus-summary-normal-unread ((t (:foreground ,uwu-black))))
+                          `(gnus-summary-selected ((t (:foreground ,uwu-yellow :weight bold))))
+                          `(gnus-cite-1 ((t (:foreground ,uwu-blue))))
+                          `(gnus-cite-2 ((t (:foreground ,uwu-blue))))
+                          `(gnus-cite-3 ((t (:foreground ,uwu-blue))))
+                          `(gnus-cite-4 ((t (:foreground ,uwu-green))))
+                          `(gnus-cite-5 ((t (:foreground ,uwu-green))))
+                          `(gnus-cite-6 ((t (:foreground ,uwu-green))))
+                          `(gnus-cite-7 ((t (:foreground ,uwu-red))))
+                          `(gnus-cite-8 ((t (:foreground ,uwu-red))))
+                          `(gnus-cite-9 ((t (:foreground ,uwu-red))))
+                          `(gnus-cite-10 ((t (:foreground ,uwu-yellow))))
+                          `(gnus-cite-11 ((t (:foreground ,uwu-yellow))))
+                          `(gnus-group-news-1-empty ((t (:foreground ,uwu-yellow))))
+                          `(gnus-group-news-2-empty ((t (:foreground ,uwu-green))))
+                          `(gnus-group-news-3-empty ((t (:foreground ,uwu-green))))
+                          `(gnus-group-news-4-empty ((t (:foreground ,uwu-blue))))
+                          `(gnus-group-news-5-empty ((t (:foreground ,uwu-blue))))
+                          `(gnus-group-news-6-empty ((t (:foreground ,uwu-bright-blue))))
+                          `(gnus-group-news-low-empty ((t (:foreground ,uwu-comment))))
+                          `(gnus-signature ((t (:foreground ,uwu-yellow))))
+                          `(gnus-x-face ((t (:background ,uwu-bg :foreground ,uwu-black))))
+                          ;; shr
+                          `(shr-h1 ((t (:inherit ,z-variable-pitch :foreground ,uwu-bright-blue
+                                                 ,@(when uwu-scale-shr-headlines
+                                                     (list :height uwu-height-plus-6))))))
+                          `(shr-h2 ((t (:inherit ,z-variable-pitch :foreground ,uwu-bright-green
+                                                 ,@(when uwu-scale-shr-headlines
+                                                     (list :height uwu-height-plus-5))))))
+                          `(shr-h3 ((t (:inherit ,z-variable-pitch :foreground ,uwu-bright-magenta
+                                                 ,@(when uwu-scale-shr-headlines
+                                                     (list :height uwu-height-plus-4))))))
+                          `(shr-h4 ((t (:inherit ,z-variable-pitch :foreground ,uwu-bright-red
+                                                 ,@(when uwu-scale-shr-headlines
+                                                     (list :height uwu-height-plus-3))))))
+                          `(shr-h5 ((t (:inherit ,z-variable-pitch :foreground ,uwu-blue
+                                                 ,@(when uwu-scale-shr-headlines
+                                                     (list :height uwu-height-plus-2))))))
+                          `(shr-h6 ((t (:inherit ,z-variable-pitch :foreground ,uwu-green
+                                                 ,@(when uwu-scale-shr-headlines
+                                                     (list :height uwu-height-plus-1))))))
+                          `(shr-code ((t (:foreground ,uwu-bright-yellow ))))
+                          `(shr-link ((t (:inherit link))))
+                          `(shr-selected-link ((t (:inherit link-visited))))
+                          ;; message
+                          `(message-cited-text ((t (:inherit font-lock-comment-face))))
+                          `(message-header-name ((t (:foreground ,uwu-comment))))
+                          `(message-header-other ((t (:foreground ,uwu-magenta))))
+                          `(message-header-to ((t (:foreground ,uwu-yellow :weight bold))))
+                          `(message-header-cc ((t (:foreground ,uwu-yellow :weight bold))))
+                          `(message-header-newsgroups ((t (:foreground ,uwu-yellow :weight bold))))
+                          `(message-header-subject ((t (:foreground ,uwu-bright-blue :weight bold))))
+                          `(message-header-xheader ((t (:foreground ,uwu-magenta))))
+                          `(message-mml ((t (:foreground ,uwu-yellow :weight bold))))
+                          `(message-separator ((t (:inherit font-lock-comment-face))))
+                          `(message-cited-text-1 ((t (:foreground ,uwu-blue))))
+                          `(message-cited-text-2 ((t (:foreground ,uwu-green))))
+                          `(message-cited-text-3 ((t (:foreground ,uwu-yellow))))
+                          `(message-cited-text-4 ((t (:foreground ,uwu-red))))
+                          `(mm-uu-extract ((t (:background ,uwu-black :foreground ,uwu-bright-green))))
+                          ;; mu4e
+                          `(mu4e-cited-1-face ((t (:foreground ,uwu-blue    :slant italic))))
+                          `(mu4e-cited-2-face ((t (:foreground ,uwu-bright-green :slant italic))))
+                          `(mu4e-cited-3-face ((t (:foreground ,uwu-bright-blue  :slant italic))))
+                          `(mu4e-cited-4-face ((t (:foreground ,uwu-green   :slant italic))))
+                          `(mu4e-cited-5-face ((t (:foreground ,uwu-bright-blue  :slant italic))))
+                          `(mu4e-cited-6-face ((t (:foreground ,uwu-bright-green :slant italic))))
+                          `(mu4e-cited-7-face ((t (:foreground ,uwu-blue    :slant italic))))
+                          `(mu4e-replied-face ((t (:foreground ,uwu-comment))))
+                          `(mu4e-trashed-face ((t (:foreground ,uwu-comment :strike-through t))))
+                          ;; notmuch
+                          `(notmuch-crypto-decryption ((t (:foreground ,uwu-bg :background ,uwu-magenta))))
+                          `(notmuch-crypto-part-header ((t (:foreground ,uwu-bright-blue))))
+                          `(notmuch-crypto-signature-bad ((t (:foreground ,uwu-bg :background ,uwu-error))))
+                          `(notmuch-crypto-signature-good ((t (:foreground ,uwu-bg :background ,uwu-green))))
+                          `(notmuch-crypto-signature-good-key ((t (:foreground ,uwu-bg :background ,uwu-yellow))))
+                          `(notmuch-crypto-signature-unknown ((t (:foreground ,uwu-bg :background ,uwu-error))))
+                          `(notmuch-hello-logo-background ((t (:background ,uwu-black))))
+                          `(notmuch-wash-cited-text ((t (:foreground ,uwu-cyan))))
+                          `(notmuch-tag-face ((t (:foreground ,uwu-yellow))))
+                          `(notmuch-tag-unread ((t (:foreground ,uwu-magenta))))
+                          `(notmuch-tag-added ((t (:underline ,uwu-green))))
+                          `(notmuch-tag-deleted ((t (:strike-through ,uwu-red))))
+                          `(notmuch-tag-flagged ((t (:foreground ,uwu-blue))));
+                          `(notmuch-message-summary-face ((t (:inherit highlight))))
+                          `(notmuch-search-date ((t (:inherit default))))
+                          `(notmuch-search-count ((t (:inherit default))))
+                          `(notmuch-search-subject ((t (:inherit default))))
+                          `(notmuch-search-matching-authors ((t (:inherit default))))
+                          `(notmuch-search-non-matching-authors ((t (:inherit shadow))))
+                          `(notmuch-search-flagged-face ((t (:foreground ,uwu-blue))))
+                          `(notmuch-search-unread-face ((t (:weight bold))))
+                          `(notmuch-tree-match-author-face ((t (:foreground ,uwu-blue))))
+                          `(notmuch-tree-match-date-face ((t (:foreground ,uwu-yellow))))
+                          `(notmuch-tree-match-tag-face ((t (:foreground ,uwu-cyan))))
+                          `(notmuch-tree-no-match-face ((t (:inherit font-lock-comment-face))))
+                          ;; mu4e
+                          `(mu4e-cited-1-face ((t (:foreground ,uwu-bright-blue :slant italic :weight normal))))
+                          `(mu4e-cited-2-face ((t (:foreground ,uwu-bright-green :slant italic :weight normal))))
+                          `(mu4e-cited-3-face ((t (:foreground ,uwu-bright-magenta :slant italic :weight normal))))
+                          `(mu4e-cited-4-face ((t (:foreground ,uwu-bright-red :slant italic :weight normal))))
+                          `(mu4e-cited-5-face ((t (:foreground ,uwu-blue :slant italic :weight normal))))
+                          `(mu4e-cited-6-face ((t (:foreground ,uwu-green :slant italic :weight normal))))
+                          `(mu4e-cited-7-face ((t (:foreground ,uwu-magenta :slant italic :weight normal))))
+                          `(mu4e-flagged-face ((t (:foreground ,uwu-blue :weight normal))))
+                          `(mu4e-unread-face ((t (:foreground ,uwu-green :weight normal))))
+                          `(mu4e-view-url-number-face ((t (:foreground ,uwu-yellow :weight normal))))
+                          `(mu4e-warning-face ((t (:foreground ,uwu-red :slant normal :weight bold))))
+                          `(mu4e-header-highlight-face
+                            ((t (,@(and (>= emacs-major-version 27) '(:extend t))
+                                 :inherit unspecified
+                                 :foreground unspecified :background ,uwu-bg
+                                 :underline unspecified  :weight unspecified))))
+                          `(mu4e-view-contact-face ((t (:foreground ,uwu-fg  :weight normal))))
+                          `(mu4e-view-header-key-face ((t (:inherit message-header-name :weight normal))))
+                          `(mu4e-view-header-value-face ((t (:foreground ,uwu-cyan :weight normal :slant normal))))
+                          `(mu4e-view-link-face ((t (:inherit link))))
+                          `(mu4e-view-special-header-value-face ((t (:foreground ,uwu-blue :weight normal :underline nil))))))
 
 ;;;###autoload
 (and load-file-name
