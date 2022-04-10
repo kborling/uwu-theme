@@ -242,6 +242,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(completions-annotations ((t (:foreground ,uwu-white))))
                           `(completions-common-part ((t (:foreground ,uwu-bright-blue))))
                           `(completions-first-difference ((t (:foreground ,uwu-bright-white))))
+                          ;; ido
                           `(ido-first-match ((t (:foreground ,uwu-blue :weight bold))))
                           `(ido-only-match ((t (:foreground ,uwu-blue :weight bold))))
                           `(ido-subdir ((t (:foreground ,uwu-yellow))))
@@ -422,6 +423,68 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(orderless-match-face-1 ((t (:foreground ,uwu-magenta))))
                           `(orderless-match-face-2 ((t (:foreground ,uwu-blue))))
                           `(orderless-match-face-3 ((t (:foreground ,uwu-yellow))))
+                          ;; helm
+                          `(helm-header
+                            ((t (:foreground ,uwu-green
+                                             :background ,uwu-bg
+                                             :underline nil
+                                             :box nil
+                                             :extend t))))
+                          `(helm-source-header
+                            ((t (:foreground ,uwu-yellow
+                                             :background ,uwu-black
+                                             :underline nil
+                                             :weight bold
+                                             :box (:line-width -1 :style released-button)
+                                             :extend t))))
+                          `(helm-selection ((t (:background ,uwu-highlight :weight bold :underline nil))))
+                          `(helm-selection-line ((t (:background ,uwu-highlight))))
+                          `(helm-visible-mark ((t (:foreground ,uwu-bg :background ,uwu-bright-yellow))))
+                          `(helm-candidate-number ((t (:foreground ,uwu-bright-green :background ,uwu-black))))
+                          `(helm-separator ((t (:foreground ,uwu-red :background ,uwu-bg))))
+                          `(helm-time-zone-current ((t (:foreground ,uwu-bright-green :background ,uwu-bg))))
+                          `(helm-time-zone-home ((t (:foreground ,uwu-red :background ,uwu-bg))))
+                          `(helm-bookmark-addressbook ((t (:foreground ,uwu-yellow :background ,uwu-bg))))
+                          `(helm-bookmark-directory ((t (:foreground nil :background nil :inherit helm-ff-directory))))
+                          `(helm-bookmark-file ((t (:foreground nil :background nil :inherit helm-ff-file))))
+                          `(helm-bookmark-gnus ((t (:foreground ,uwu-magenta :background ,uwu-bg))))
+                          `(helm-bookmark-info ((t (:foreground ,uwu-bright-green :background ,uwu-bg))))
+                          `(helm-bookmark-man ((t (:foreground ,uwu-yellow :background ,uwu-bg))))
+                          `(helm-bookmark-w3m ((t (:foreground ,uwu-magenta :background ,uwu-bg))))
+                          `(helm-buffer-not-saved ((t (:foreground ,uwu-red :background ,uwu-bg))))
+                          `(helm-buffer-process ((t (:foreground ,uwu-cyan :background ,uwu-bg))))
+                          `(helm-buffer-saved-out ((t (:foreground ,uwu-fg :background ,uwu-bg))))
+                          `(helm-buffer-size ((t (:foreground ,uwu-white :background ,uwu-bg))))
+                          `(helm-ff-directory ((t (:foreground ,uwu-cyan :background ,uwu-bg :weight bold))))
+                          `(helm-ff-file ((t (:foreground ,uwu-fg :background ,uwu-bg :weight normal))))
+                          `(helm-ff-file-extension ((t (:foreground ,uwu-fg :background ,uwu-bg :weight normal))))
+                          `(helm-ff-executable ((t (:foreground ,uwu-bright-green :background ,uwu-bg :weight normal))))
+                          `(helm-ff-invalid-symlink ((t (:foreground ,uwu-red :background ,uwu-bg :weight bold))))
+                          `(helm-ff-symlink ((t (:foreground ,uwu-yellow :background ,uwu-bg :weight bold))))
+                          `(helm-ff-prefix ((t (:foreground ,uwu-bg :background ,uwu-yellow :weight normal))))
+                          `(helm-grep-cmd-line ((t (:foreground ,uwu-cyan :background ,uwu-bg))))
+                          `(helm-grep-file ((t (:foreground ,uwu-fg :background ,uwu-bg))))
+                          `(helm-grep-finish ((t (:foreground ,uwu-bright-green :background ,uwu-bg))))
+                          `(helm-grep-lineno ((t (:foreground ,uwu-white :background ,uwu-bg))))
+                          `(helm-grep-match ((t (:foreground nil :background nil :inherit helm-match))))
+                          `(helm-grep-running ((t (:foreground ,uwu-red :background ,uwu-bg))))
+                          `(helm-match ((t (:foreground ,uwu-yellow :background ,uwu-black :weight bold))))
+                          `(helm-moccur-buffer ((t (:foreground ,uwu-cyan :background ,uwu-bg))))
+                          `(helm-mu-contacts-address-face ((t (:foreground ,uwu-white :background ,uwu-bg))))
+                          `(helm-mu-contacts-name-face ((t (:foreground ,uwu-fg :background ,uwu-bg))))
+                          ;; ivy
+                          `(ivy-confirm-face ((t (:foreground ,uwu-green :background ,uwu-bg))))
+                          `(ivy-current-match ((t (:foreground ,uwu-yellow :weight bold :underline t))))
+                          `(ivy-cursor ((t (:foreground ,uwu-bg :background ,uwu-fg))))
+                          `(ivy-match-required-face ((t (:foreground ,uwu-red :background ,uwu-bg))))
+                          `(ivy-minibuffer-match-face-1 ((t (:background ,uwu-black))))
+                          `(ivy-minibuffer-match-face-2 ((t (:background ,uwu-bright-green))))
+                          `(ivy-minibuffer-match-face-3 ((t (:background ,uwu-green))))
+                          `(ivy-minibuffer-match-face-4 ((t (:background ,uwu-green))))
+                          `(ivy-remote ((t (:foreground ,uwu-blue :background ,uwu-bg))))
+                          `(ivy-subdir ((t (:foreground ,uwu-yellow :background ,uwu-bg))))
+                          ;; swiper
+                          `(swiper-line-face ((t (:background ,uwu-highlight))))
                           ;; helpful
                           `(helpful-heading ((t (:foreground ,uwu-bright-green :height 1.2))))
                           ;; rainbow-delimiters
@@ -462,15 +525,15 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(gnus-summary-high-ancient ((t (:foreground ,uwu-blue :weight bold))))
                           `(gnus-summary-high-read ((t (:foreground ,uwu-green :weight bold))))
                           `(gnus-summary-high-ticked ((t (:foreground ,uwu-yellow :weight bold))))
-                          `(gnus-summary-high-unread ((t (:foreground ,uwu-black :weight bold))))
+                          `(gnus-summary-high-unread ((t (:foreground ,uwu-fg :weight bold))))
                           `(gnus-summary-low-ancient ((t (:foreground ,uwu-blue))))
                           `(gnus-summary-low-read ((t (:foreground ,uwu-green))))
                           `(gnus-summary-low-ticked ((t (:foreground ,uwu-yellow))))
-                          `(gnus-summary-low-unread ((t (:foreground ,uwu-black))))
+                          `(gnus-summary-low-unread ((t (:foreground ,uwu-fg))))
                           `(gnus-summary-normal-ancient ((t (:foreground ,uwu-blue))))
                           `(gnus-summary-normal-read ((t (:foreground ,uwu-green))))
                           `(gnus-summary-normal-ticked ((t (:foreground ,uwu-yellow))))
-                          `(gnus-summary-normal-unread ((t (:foreground ,uwu-black))))
+                          `(gnus-summary-normal-unread ((t (:foreground ,uwu-fg))))
                           `(gnus-summary-selected ((t (:foreground ,uwu-yellow :weight bold))))
                           `(gnus-cite-1 ((t (:foreground ,uwu-blue))))
                           `(gnus-cite-2 ((t (:foreground ,uwu-blue))))
@@ -491,7 +554,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(gnus-group-news-6-empty ((t (:foreground ,uwu-bright-blue))))
                           `(gnus-group-news-low-empty ((t (:foreground ,uwu-comment))))
                           `(gnus-signature ((t (:foreground ,uwu-yellow))))
-                          `(gnus-x-face ((t (:background ,uwu-bg :foreground ,uwu-black))))
+                          `(gnus-x-face ((t (:background ,uwu-bg :foreground ,uwu-comment))))
                           ;; shr
                           `(shr-h1 ((t (:inherit ,z-variable-pitch :foreground ,uwu-bright-blue
                                                  ,@(when uwu-scale-shr-headlines
