@@ -488,6 +488,8 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(swiper-line-face ((t (:background ,uwu-highlight))))
                           ;; helpful
                           `(helpful-heading ((t (:foreground ,uwu-bright-green :height 1.2))))
+                          ;; which function
+                          `(which-func ((t (:foreground ,uwu-blue))))
                           ;; rainbow-delimiters
                           `(rainbow-delimiters-depth-1-face ((t (:foreground ,uwu-bright-blue))))
                           `(rainbow-delimiters-depth-2-face ((t (:foreground ,uwu-bright-green))))
