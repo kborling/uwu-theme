@@ -244,7 +244,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(completions-first-difference ((t (:foreground ,uwu-bright-white))))
                           ;; ido
                           `(ido-first-match ((t (:foreground ,uwu-blue :weight bold))))
-                          `(ido-only-match ((t (:foreground ,uwu-blue :weight bold))))
+                          `(ido-only-match ((t (:foreground ,uwu-green :weight bold))))
                           `(ido-subdir ((t (:foreground ,uwu-yellow))))
                           `(ido-indicator ((t (:foreground ,uwu-yellow :background ,uwu-bright-red))))
                           ;; org-mode
@@ -416,13 +416,13 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(vertico-group-separator ((t (:foreground ,uwu-green :weight bold))))
                           ;; selectrum
                           `(selectrum-current-candidate ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
-                          `(selectrum-primary-highlight ((t (:background ,uwu-bright-green))))
-                          `(selectrum-secondary-highlight ((t (:background ,uwu-green))))
+                          `(selectrum-primary-highlight ((t (:foreground ,uwu-blue :weight bold))))
+                          `(selectrum-secondary-highlight ((t (:foreground ,uwu-magenta :weight bold))))
                           ;; orderless
-                          `(orderless-match-face-0 ((t (:foreground ,uwu-green))))
+                          `(orderless-match-face-0 ((t (:foreground ,uwu-blue))))
                           `(orderless-match-face-1 ((t (:foreground ,uwu-magenta))))
-                          `(orderless-match-face-2 ((t (:foreground ,uwu-blue))))
-                          `(orderless-match-face-3 ((t (:foreground ,uwu-yellow))))
+                          `(orderless-match-face-2 ((t (:foreground ,uwu-green))))
+                          `(orderless-match-face-3 ((t (:foreground ,uwu-cyan))))
                           ;; helm
                           `(helm-header
                             ((t (:foreground ,uwu-green
@@ -437,8 +437,8 @@ Also bind `class' to ((class color) (min-colors 89))."
                                              :weight bold
                                              :box (:line-width -1 :style released-button)
                                              :extend t))))
-                          `(helm-selection ((t (:background ,uwu-highlight :weight bold :underline nil))))
-                          `(helm-selection-line ((t (:background ,uwu-highlight))))
+                          `(helm-selection ((t (:background ,uwu-black :weight bold :underline nil))))
+                          `(helm-selection-line ((t (:background ,uwu-black))))
                           `(helm-visible-mark ((t (:foreground ,uwu-bg :background ,uwu-bright-yellow))))
                           `(helm-candidate-number ((t (:foreground ,uwu-green :background ,uwu-black))))
                           `(helm-separator ((t (:foreground ,uwu-red :background ,uwu-bg))))
@@ -475,13 +475,13 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(helm-mu-contacts-name-face ((t (:foreground ,uwu-fg :background ,uwu-bg))))
                           ;; ivy
                           `(ivy-confirm-face ((t (:foreground ,uwu-green :background ,uwu-bg))))
-                          `(ivy-current-match ((t (:background ,uwu-highlight :weight bold))))
+                          `(ivy-current-match ((t (:foreground ,uwu-yellow :background ,uwu-black :weight bold))))
                           `(ivy-cursor ((t (:foreground ,uwu-bg :background ,uwu-fg))))
                           `(ivy-match-required-face ((t (:foreground ,uwu-red :background ,uwu-bg :weight bold))))
-                          `(ivy-minibuffer-match-face-1 ((t (:inverse-video t :foreground ,uwu-magenta :weight bold ))))
-                          `(ivy-minibuffer-match-face-2 ((t (:inverse-video t :foreground ,uwu-green :weight bold))))
-                          `(ivy-minibuffer-match-face-3 ((t (:inverse-video t :foreground ,uwu-blue :weight bold))))
-                          `(ivy-minibuffer-match-face-4 ((t (:inverse-video t :foreground ,uwu-yellow :weight bold))))
+                          `(ivy-minibuffer-match-face-1 ((t (:foreground ,uwu-magenta :weight bold ))))
+                          `(ivy-minibuffer-match-face-2 ((t (:foreground ,uwu-blue :weight bold))))
+                          `(ivy-minibuffer-match-face-3 ((t (:foreground ,uwu-green :weight bold))))
+                          `(ivy-minibuffer-match-face-4 ((t (:foreground ,uwu-cyan :weight bold))))
                           `(ivy-remote ((t (:foreground ,uwu-blue :background ,uwu-bg))))
                           `(ivy-subdir ((t (:foreground ,uwu-yellow :background ,uwu-bg))))
                           ;; swiper
