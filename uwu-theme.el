@@ -475,13 +475,13 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(helm-mu-contacts-name-face ((t (:foreground ,uwu-fg :background ,uwu-bg))))
                           ;; ivy
                           `(ivy-confirm-face ((t (:foreground ,uwu-green :background ,uwu-bg))))
-                          `(ivy-current-match ((t (:foreground ,uwu-yellow :weight bold :underline t))))
+                          `(ivy-current-match ((t (:background ,uwu-highlight :weight bold))))
                           `(ivy-cursor ((t (:foreground ,uwu-bg :background ,uwu-fg))))
-                          `(ivy-match-required-face ((t (:foreground ,uwu-red :background ,uwu-bg))))
-                          `(ivy-minibuffer-match-face-1 ((t (:background ,uwu-black))))
-                          `(ivy-minibuffer-match-face-2 ((t (:background ,uwu-bright-green))))
-                          `(ivy-minibuffer-match-face-3 ((t (:background ,uwu-green))))
-                          `(ivy-minibuffer-match-face-4 ((t (:background ,uwu-green))))
+                          `(ivy-match-required-face ((t (:foreground ,uwu-red :background ,uwu-bg :weight bold))))
+                          `(ivy-minibuffer-match-face-1 ((t (:inverse-video t :foreground ,uwu-magenta :weight bold ))))
+                          `(ivy-minibuffer-match-face-2 ((t (:inverse-video t :foreground ,uwu-green :weight bold))))
+                          `(ivy-minibuffer-match-face-3 ((t (:inverse-video t :foreground ,uwu-blue :weight bold))))
+                          `(ivy-minibuffer-match-face-4 ((t (:inverse-video t :foreground ,uwu-yellow :weight bold))))
                           `(ivy-remote ((t (:foreground ,uwu-blue :background ,uwu-bg))))
                           `(ivy-subdir ((t (:foreground ,uwu-yellow :background ,uwu-bg))))
                           ;; swiper
@@ -620,7 +620,6 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(notmuch-tree-match-date-face ((t (:foreground ,uwu-yellow))))
                           `(notmuch-tree-match-tag-face ((t (:foreground ,uwu-cyan))))
                           `(notmuch-tree-no-match-face ((t (:inherit font-lock-comment-face))))
-                          ;; mu4e
                           ;; mu4e
                           `(mu4e-unread-face ((t (:foreground ,uwu-green :weight normal))))
                           `(mu4e-replied-face ((t (:foreground ,uwu-comment))))
