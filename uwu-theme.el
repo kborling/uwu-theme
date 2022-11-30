@@ -241,7 +241,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(match ((t (:background ,uwu-black :foreground ,uwu-bright-blue :weight bold))))
                           `(completions-annotations ((t (:foreground ,uwu-white))))
                           `(completions-common-part ((t (:foreground ,uwu-bright-blue))))
-                          `(completions-first-difference ((t (:foreground ,uwu-bright-white))))
+                          `(completions-first-difference ((t (:inherit bold :foreground ,uwu-white))))
                           ;; ido
                           `(ido-first-match ((t (:foreground ,uwu-blue :weight bold))))
                           `(ido-only-match ((t (:foreground ,uwu-green :weight bold))))
@@ -418,6 +418,11 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(powerline-active2 ((t (:background ,uwu-black :foreground ,uwu-white))))
                           `(powerline-inactive1 ((t (:background ,uwu-black :foreground ,uwu-comment))))
                           `(powerline-inactive2 ((t (:background ,uwu-black :foreground ,uwu-comment))))
+                          ;; embark
+                          `(embark-keybinding ((t (:foreground ,uwu-magenta))))
+                          `(embark-keybinding-repeat ((t (:inherit bold))))
+                          `(embark-collect-group-title ((t (:inherit bold :foreground ,uwu-green))))
+                          `(embark-collect-zebra-highlight ((t (:background ,uwu-black))))
                           ;; vertico
                           `(vertico-current ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
                           `(vertico-multiline ((t (:foreground ,uwu-green :weight bold))))
