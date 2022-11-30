@@ -418,6 +418,13 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(powerline-active2 ((t (:background ,uwu-black :foreground ,uwu-white))))
                           `(powerline-inactive1 ((t (:background ,uwu-black :foreground ,uwu-comment))))
                           `(powerline-inactive2 ((t (:background ,uwu-black :foreground ,uwu-comment))))
+                          ;; consult
+                          `(consult-async-split ((t (:inherit warning))))
+                          `(consult-key ((t (:inherit uwu-magenta))))
+                          `(consult-line-number ((t (:foreground ,(if uwu-distinct-line-numbers uwu-white uwu-comment)
+                                                         ,@(when uwu-distinct-line-numbers
+                                                             (list :background uwu-black))))))
+                          `(consult-separator ((t (:foreground ,uwu-bright-black))))
                           ;; embark
                           `(embark-keybinding ((t (:foreground ,uwu-magenta))))
                           `(embark-keybinding-repeat ((t (:inherit bold))))
