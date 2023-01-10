@@ -373,6 +373,59 @@ Also bind `class' to ((class color) (min-colors 89))."
                                                               :background ,uwu-fg))))
                           '(term-default-fg-color ((t (:inherit uwu-fg))))
                           '(term-default-bg-color ((t (:inherit uwu-bg))))
+                          ;; slime
+                          `(slime-repl-output-face ((t (:foreground ,uwu-red))))
+                          `(slime-repl-inputed-output-face ((t (:foreground ,uwu-green))))
+                          `(slime-error-face
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-error)))
+                             (t
+                              (:underline ,uwu-error))))
+                          `(slime-warning-face
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-warning)))
+                             (t
+                              (:underline ,uwu-warning))))
+                          `(slime-style-warning-face
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-yellow)))
+                             (t
+                              (:underline ,uwu-yellow))))
+                          `(slime-note-face
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-green)))
+                             (t
+                              (:underline ,uwu-green))))
+                          `(slime-highlight-face ((t (:inherit highlight))))
+                          ;; sly
+                          `(sly-db-condition-face ((t (:foreground ,uwu-red))))
+                          `(sly-mrepl-output-face ((t (:foreground ,uwu-red))))
+                          `(sly-action-face ((t (:foreground ,uwu-warning :weight bold))))
+                          `(sly-error-face
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-error)))
+                             (t
+                              (:underline ,uwu-error))))
+                          `(sly-warning-face
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-warning)))
+                             (t
+                              (:underline ,uwu-warning))))
+                          `(sly-style-warning-face
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-yellow)))
+                             (t
+                              (:underline ,uwu-yellow))))
+                          `(sly-note-face
+                            ((((supports :underline (:style wave)))
+                              (:underline (:style wave :color ,uwu-green)))
+                             (t
+                              (:underline ,uwu-green))))
+                          `(sly-stickers-placed-face ((t (:foreground ,uwu-fg :background ,uwu-black))))
+                          `(sly-stickers-empty-face ((t (:foreground ,uwu-bg :background ,uwu-red))))
+                          `(sly-stickers-exited-non-locally-face ((t (:foreground ,uwu-bg :background ,uwu-red :strike-through t))))
+                          `(sly-stickers-armed-face ((t (:foreground ,uwu-bg :background ,uwu-blue))))
+                          `(sly-stickers-recordings-face ((t (:foreground ,uwu-bg :background ,uwu-green))))
                           ;; diff-mode
                           `(diff-added ((t (:foreground ,uwu-bright-green :background: ,uwu-black :extend t))))
                           `(diff-changed ((t  (:foreground ,uwu-warning :background: ,uwu-black :extend t))))
@@ -423,8 +476,8 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(consult-async-split ((t (:inherit warning))))
                           `(consult-key ((t (:inherit uwu-magenta))))
                           `(consult-line-number ((t (:foreground ,(if uwu-distinct-line-numbers uwu-white uwu-comment)
-                                                         ,@(when uwu-distinct-line-numbers
-                                                             (list :background uwu-black))))))
+                                                                 ,@(when uwu-distinct-line-numbers
+                                                                     (list :background uwu-black))))))
                           `(consult-separator ((t (:foreground ,uwu-bright-black))))
                           ;; embark
                           `(embark-keybinding ((t (:foreground ,uwu-magenta))))
