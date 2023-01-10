@@ -398,8 +398,14 @@ Also bind `class' to ((class color) (min-colors 89))."
                               (:underline ,uwu-green))))
                           `(slime-highlight-face ((t (:inherit highlight))))
                           ;; sly
+                          `(sly-mrepl-prompt-face ((t (:foreground ,uwu-blue :weight bold))))
                           `(sly-db-condition-face ((t (:foreground ,uwu-red))))
                           `(sly-mrepl-output-face ((t (:foreground ,uwu-red))))
+                          `(sly-apropos-label ((t (:foreground ,uwu-magenta :slant italic))))
+                          `(sly-apropos-symbol ((t (:foreground ,uwu-green))))
+                          `(sly-reader-conditional-face ((t (:foreground ,uwu-comment :slant italic))))
+                          `(sly-db-restart-number-face ((t (:foreground ,uwu-comment))))
+                          `(sly-db-frame-label-face ((t (:foreground ,uwu-comment))))
                           `(sly-action-face ((t (:foreground ,uwu-warning :weight bold))))
                           `(sly-error-face
                             ((((supports :underline (:style wave)))
