@@ -373,6 +373,18 @@ Also bind `class' to ((class color) (min-colors 89))."
                                                               :background ,uwu-fg))))
                           '(term-default-fg-color ((t (:inherit uwu-fg))))
                           '(term-default-bg-color ((t (:inherit uwu-bg))))
+                          ;; eshell
+                          `(eshell-prompt ((t (:foreground ,uwu-cyan :weight bold))))
+                          `(eshell-ls-archive ((t (:foreground ,uwu-red :weight bold))))
+                          `(eshell-ls-backup ((t (:inherit font-lock-comment-face))))
+                          `(eshell-ls-clutter ((t (:inherit font-lock-comment-face))))
+                          `(eshell-ls-directory ((t (:foreground ,uwu-cyan :weight bold))))
+                          `(eshell-ls-executable ((t (:foreground ,uwu-red :weight bold))))
+                          `(eshell-ls-unreadable ((t (:foreground ,uwu-fg))))
+                          `(eshell-ls-missing ((t (:inherit font-lock-warning-face))))
+                          `(eshell-ls-product ((t (:inherit font-lock-doc-face))))
+                          `(eshell-ls-special ((t (:foreground ,uwu-yellow :weight bold))))
+                          `(eshell-ls-symlink ((t (:foreground ,uwu-blue :weight bold))))
                           ;; slime
                           `(slime-repl-output-face ((t (:foreground ,uwu-red))))
                           `(slime-repl-inputed-output-face ((t (:foreground ,uwu-green))))
