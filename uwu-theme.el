@@ -507,10 +507,6 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(vertico-multiline ((t (:foreground ,uwu-green :weight bold))))
                           `(vertico-group-title ((t (:foreground ,uwu-green :weight bold))))
                           `(vertico-group-separator ((t (:foreground ,uwu-green :weight bold))))
-                          ;; selectrum
-                          `(selectrum-current-candidate ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
-                          `(selectrum-primary-highlight ((t (:foreground ,uwu-blue :weight bold))))
-                          `(selectrum-secondary-highlight ((t (:foreground ,uwu-magenta :weight bold))))
                           ;; orderless
                           `(orderless-match-face-0 ((t (:foreground ,uwu-blue))))
                           `(orderless-match-face-1 ((t (:foreground ,uwu-magenta))))
