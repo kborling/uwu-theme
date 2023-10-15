@@ -244,7 +244,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(completions-common-part ((t (:foreground ,uwu-bright-blue))))
                           `(completions-first-difference ((t (:inherit bold :foreground ,uwu-white))))
                           ;; ido
-                          `(ido-first-match ((t (:foreground ,uwu-blue :weight bold))))
+                          `(ido-first-match ((t (:foreground ,uwu-bright-blue :weight bold))))
                           `(ido-only-match ((t (:foreground ,uwu-green :weight bold))))
                           `(ido-subdir ((t (:foreground ,uwu-yellow))))
                           `(ido-indicator ((t (:foreground ,uwu-yellow :background ,uwu-bright-red))))
