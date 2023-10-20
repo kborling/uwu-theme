@@ -243,6 +243,10 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(completions-annotations ((t (:foreground ,uwu-white))))
                           `(completions-common-part ((t (:foreground ,uwu-bright-blue))))
                           `(completions-first-difference ((t (:inherit bold :foreground ,uwu-white))))
+                          ;; icomplete
+                          `(icomplete-first-match ((t (:foreground ,uwu-bright-blue :weight bold))))
+                          `(icomplete-selected-match ((t (:background ,uwu-black :foreground ,uwu-yellow :weight bold))))
+                          `(icomplete-section ((t (:foreground ,uwu-green :weight bold))))
                           ;; ido
                           `(ido-first-match ((t (:foreground ,uwu-bright-blue :weight bold))))
                           `(ido-only-match ((t (:foreground ,uwu-green :weight bold))))
