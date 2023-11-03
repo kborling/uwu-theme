@@ -168,17 +168,17 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(highline-face ((t (:background ,uwu-black))))
                           `(ac-selection-face ((t (:background ,uwu-magenta :foreground ,uwu-highlight))))
                           `(ac-candidate-face ((t (:background ,uwu-black :foreground ,uwu-white))))
-                          `(flymake-errline
+                          `(flymake-error
                             ((((supports :underline (:style wave)))
                               (:underline (:style wave :color ,uwu-error)
                                           :inherit unspecified :foreground unspecified :background unspecified))
                              (t (:foreground ,uwu-error :weight bold :underline t))))
-                          `(flymake-warnline
+                          `(flymake-warning
                             ((((supports :underline (:style wave)))
                               (:underline (:style wave :color ,uwu-warning)
                                           :inherit unspecified :foreground unspecified :background unspecified))
                              (t (:foreground ,uwu-warning :weight bold :underline t))))
-                          `(flymake-infoline
+                          `(flymake-note
                             ((((supports :underline (:style wave)))
                               (:underline (:style wave :color ,uwu-green)
                                           :inherit unspecified :foreground unspecified :background unspecified))
