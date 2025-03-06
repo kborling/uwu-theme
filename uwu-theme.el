@@ -1,6 +1,6 @@
 ;;; uwu-theme.el --- An awesome dark color scheme  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2021 Kevin Borling <kborling@protonmail.com>
+;; Copyright (C) 2025 Kevin Borling <kborling@protonmail.com>
 
 ;; Author: Kevin Borling
 ;; Created: December 24, 2021
@@ -583,6 +583,8 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(helpful-heading ((t (:foreground ,uwu-bright-green :height 1.2))))
                           ;; which function
                           `(which-func ((t (:foreground ,uwu-blue))))
+                          ;; deadgrep
+                          `(deadgrep-filename-face ((t (:foreground ,uwu-green :weight bold))))
                           ;; rainbow-delimiters
                           `(rainbow-delimiters-depth-1-face ((t (:foreground ,uwu-bright-blue))))
                           `(rainbow-delimiters-depth-2-face ((t (:foreground ,uwu-bright-green))))
