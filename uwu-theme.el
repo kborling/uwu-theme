@@ -164,7 +164,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(font-lock-comment-face ((t (:slant italic :foreground ,uwu-comment))))
                           `(shadow ((t (:foreground ,uwu-comment))))
                           `(Info-quoted ((t (:inherit font-lock-constant-face))))
-                          `(show-paren-match-face ((t (:inverse-video t :background ,uwu-white :foreground ,uwu-red))))
+                          `(show-paren-match ((t (:inverse-video t :background ,uwu-highlight :foreground ,uwu-bright-blue))))
                           `(highline-face ((t (:background ,uwu-black))))
                           `(ac-selection-face ((t (:background ,uwu-magenta :foreground ,uwu-highlight))))
                           `(ac-candidate-face ((t (:background ,uwu-black :foreground ,uwu-white))))
@@ -260,7 +260,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(org-archived ((t (:foreground ,uwu-fg :weight bold))))
                           `(org-block ((t (:background ,uwu-black :foreground ,uwu-white :extend t))))
                           `(org-block-begin-line ((t (:foreground ,uwu-comment :background ,uwu-black :extend t))))
-                          `(org-code ((t (:foreground ,uwu-bright-yellow ))))
+                          `(org-code ((t (:foreground ,uwu-bright-yellow))))
                           `(org-checkbox ((t (:background ,uwu-bg :foreground ,uwu-fg
                                                           :box (:line-width 1 :style released-button)))))
                           `(org-date ((t (:foreground ,uwu-blue :underline t))))
