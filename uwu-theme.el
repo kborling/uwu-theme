@@ -174,7 +174,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(font-lock-comment-face ((t (:slant italic :foreground ,uwu-comment))))
                           `(shadow ((t (:foreground ,uwu-comment))))
                           `(Info-quoted ((t (:inherit font-lock-constant-face))))
-                          `(show-paren-match ((t (:inverse-video t :background ,uwu-white :foreground ,uwu-red))))
+                          `(show-paren-match ((t (:background ,uwu-highlight :foreground ,uwu-bright-cyan :weight bold))))
                           `(show-paren-mismatch ((t (:background ,uwu-error :foreground ,uwu-white :weight bold))))
                           `(flymake-error
                             ((((supports :underline (:style wave)))
