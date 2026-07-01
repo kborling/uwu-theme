@@ -65,10 +65,10 @@
       ("uwu-bright-magenta" . "#BB8FE5")
       ("uwu-bright-cyan"    . "#6DB0AD")
       ("uwu-bright-white"   . "#C5C8C9")
-      ("uwu-comment"        . "#62686A")
+      ("uwu-comment"        . "#828A8C")
       ("uwu-highlight"      . "#2F3638")
       ("uwu-warning"        . "#E6D967")
-      ("uwu-error"          . "#E93D3D"))))
+      ("uwu-error"          . "#EF4444"))))
 
 (defvar uwu-use-variable-pitch nil
   "When non-nil, use variable pitch face for some headings and titles.")
