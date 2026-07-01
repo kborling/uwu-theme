@@ -148,7 +148,7 @@ Also bind `class' to ((class color) (min-colors 89))."
          (z-variable-pitch (if uwu-use-variable-pitch
                                'variable-pitch 'default))
          (z-cursor-color (if (eq uwu-cursor-color 'red)
-                               (cdr (assoc "uwu-red" uwu-colors-alist))
+                               (cdr (assoc "uwu-bright-red" uwu-colors-alist))
                              (cdr (assoc "uwu-white" uwu-colors-alist)))))
      ,@body))
 
