@@ -473,23 +473,23 @@ Also bind `class' to ((class color) (min-colors 89))."
                           `(diff-hl-delete ((,class (:inverse-video t :foreground ,uwu-error :background ,uwu-bg))))
                           `(diff-hl-insert ((,class (:inverse-video t :foreground ,uwu-bright-green :background ,uwu-bg))))
                           ;; tab-bar
-                          `(tab-bar ((t (:height 1.1 :foreground ,uwu-white :background ,uwu-black))))
-                          `(tab-bar-tab ((t (:background ,uwu-black
-                                                         :foreground ,uwu-magenta
-                                                         :box (:line-width 1 :style released-button)))))
-                          `(tab-bar-tab-inactive ((t (:inherit tab-bar-tab
-                                                               :background ,uwu-black
-                                                               :foreground ,uwu-comment))))
+                          `(tab-bar ((t (:foreground ,uwu-comment :background ,uwu-bg))))
+                          `(tab-bar-tab ((t (:background ,uwu-highlight
+                                                         :foreground ,uwu-bright-white
+                                                         :box (:line-width (4 . 2) :color ,uwu-highlight)))))
+                          `(tab-bar-tab-inactive ((t (:background ,uwu-bg
+                                                                  :foreground ,uwu-comment
+                                                                  :box (:line-width (4 . 2) :color ,uwu-bg)))))
 
                           ;; tab-line
-                          `(tab-line ((t (:foreground ,uwu-white :background ,uwu-black))))
+                          `(tab-line ((t (:foreground ,uwu-comment :background ,uwu-bg))))
                           `(tab-line-close-highlight ((t (:foreground ,uwu-red))))
-                          `(tab-line-tab ((t (:background ,uwu-black
-                                                          :foreground ,uwu-magenta
-                                                          :box (:line-width 1 :style released-button)))))
-                          `(tab-line-tab-inactive ((t (:inherit tab-line-tab
-                                                                :background ,uwu-black
-                                                                :foreground ,uwu-comment))))
+                          `(tab-line-tab ((t (:background ,uwu-highlight
+                                                          :foreground ,uwu-bright-white
+                                                          :box (:line-width (4 . 2) :color ,uwu-highlight)))))
+                          `(tab-line-tab-inactive ((t (:background ,uwu-bg
+                                                                   :foreground ,uwu-comment
+                                                                   :box (:line-width (4 . 2) :color ,uwu-bg)))))
                           ;; log-view (vc-log)
                           `(log-view-file ((t (:foreground ,uwu-blue :weight bold))))
                           `(log-view-message ((t (:foreground ,uwu-fg))))
